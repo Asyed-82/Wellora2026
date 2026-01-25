@@ -23,13 +23,15 @@
             /* Brand Colors - Updated */
             --thorne-color: #1a73e8;
             --pure-color: #00a86b;
-            --designs-color: #800080; /* Changed from orange to purple */
-            --metagenics-color: #008080; /* Changed from purple to teal */
+            --designs-color: #800080;
+            --metagenics-color: #008080;
             --gaia-color: #2e8b57;
-            --now-color: #800000; /* Changed from orange to maroon */
+            --now-color: #800000;
             
-            /* Category Colors */
-            --red: #FF0000;
+            /* Category Colors - UPDATED */
+            --dark-pink: #C2185B; /* Dark Pink for Gut Health */
+            --brown: #8B4513; /* Brown for Hormone Support */
+            --tan: #D2B48C;
             --maroon: #800000;
             --yellow: #FFFF00;
             --olive: #808000;
@@ -351,7 +353,7 @@
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
 
-        /* Individual Brand Background Colors - UPDATED */
+        /* Individual Brand Background Colors */
         .brand-thorne {
             background: linear-gradient(135deg, var(--thorne-color) 0%, #4d94ff 100%);
             color: white;
@@ -363,12 +365,12 @@
         }
 
         .brand-designs {
-            background: linear-gradient(135deg, var(--designs-color) 0%, #b347b3 100%); /* Purple */
+            background: linear-gradient(135deg, var(--designs-color) 0%, #b347b3 100%);
             color: white;
         }
 
         .brand-metagenics {
-            background: linear-gradient(135deg, var(--metagenics-color) 0%, #00b3b3 100%); /* Teal */
+            background: linear-gradient(135deg, var(--metagenics-color) 0%, #00b3b3 100%);
             color: white;
         }
 
@@ -378,7 +380,7 @@
         }
 
         .brand-now {
-            background: linear-gradient(135deg, var(--now-color) 0%, #b30000 100%); /* Maroon */
+            background: linear-gradient(135deg, var(--now-color) 0%, #b30000 100%);
             color: white;
         }
 
@@ -438,7 +440,7 @@
             transform: translateY(-2px);
         }
 
-        /* Categories Section - COLORFUL BACKGROUNDS */
+        /* Categories Section - COLORFUL BACKGROUNDS - UPDATED */
         .categories {
             padding: 80px 0;
             background: linear-gradient(135deg, #f8f9ff 0%, #eef1ff 100%);
@@ -484,21 +486,76 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
 
-        /* Individual Category Background Colors */
-        .category-gut { background: linear-gradient(135deg, var(--red) 0%, #ff4d4d 100%); }
-        .category-women { background: linear-gradient(135deg, var(--maroon) 0%, #b30000 100%); }
-        .category-men { background: linear-gradient(135deg, var(--yellow) 0%, #ffff4d 100%); color: #333; }
-        .category-immune { background: linear-gradient(135deg, var(--olive) 0%, #b3b300 100%); color: #333; }
-        .category-sleep { background: linear-gradient(135deg, var(--lime) 0%, #4dff4d 100%); color: #333; }
-        .category-stress { background: linear-gradient(135deg, var(--green) 0%, #00b300 100%); }
-        .category-probiotics { background: linear-gradient(135deg, var(--aqua) 0%, #4dffff 100%); color: #333; }
-        .category-methylation { background: linear-gradient(135deg, var(--teal) 0%, #00b3b3 100%); }
-        .category-protein { background: linear-gradient(135deg, var(--blue) 0%, #4d4dff 100%); }
-        .category-cognition { background: linear-gradient(135deg, var(--navy) 0%, #0000b3 100%); }
-        .category-thyroid { background: linear-gradient(135deg, var(--fuchsia) 0%, #ff4dff 100%); }
-        .category-bone { background: linear-gradient(135deg, var(--purple) 0%, #b347b3 100%); }
-        .category-skin { background: linear-gradient(135deg, var(--red) 0%, #ff4d4d 100%); }
-        .category-hormone { background: linear-gradient(135deg, var(--maroon) 0%, #b30000 100%); }
+        /* Individual Category Background Colors - UPDATED */
+        .category-gut { 
+            background: linear-gradient(135deg, var(--dark-pink) 0%, #e91e63 100%); /* Dark Pink */
+            color: white;
+        }
+        
+        .category-women { 
+            background: linear-gradient(135deg, var(--maroon) 0%, #b30000 100%); 
+            color: white;
+        }
+        
+        .category-men { 
+            background: linear-gradient(135deg, var(--yellow) 0%, #ffff4d 100%); 
+            color: #333; 
+        }
+        
+        .category-immune { 
+            background: linear-gradient(135deg, var(--olive) 0%, #b3b300 100%); 
+            color: #333; 
+        }
+        
+        .category-sleep { 
+            background: linear-gradient(135deg, var(--lime) 0%, #4dff4d 100%); 
+            color: #333; 
+        }
+        
+        .category-stress { 
+            background: linear-gradient(135deg, var(--green) 0%, #00b300 100%); 
+            color: white;
+        }
+        
+        .category-probiotics { 
+            background: linear-gradient(135deg, var(--aqua) 0%, #4dffff 100%); 
+            color: #333; 
+        }
+        
+        .category-methylation { 
+            background: linear-gradient(135deg, var(--teal) 0%, #00b3b3 100%); 
+            color: white;
+        }
+        
+        .category-protein { 
+            background: linear-gradient(135deg, var(--blue) 0%, #4d4dff 100%); 
+            color: white;
+        }
+        
+        .category-cognition { 
+            background: linear-gradient(135deg, var(--navy) 0%, #0000b3 100%); 
+            color: white;
+        }
+        
+        .category-thyroid { 
+            background: linear-gradient(135deg, var(--fuchsia) 0%, #ff4dff 100%); 
+            color: white;
+        }
+        
+        .category-bone { 
+            background: linear-gradient(135deg, var(--purple) 0%, #b347b3 100%); 
+            color: white;
+        }
+        
+        .category-skin { 
+            background: linear-gradient(135deg, var(--tan) 0%, #e6d0b3 100%); /* Tan color */
+            color: #333;
+        }
+        
+        .category-hormone { 
+            background: linear-gradient(135deg, var(--brown) 0%, #a0522d 100%); /* Brown color */
+            color: white;
+        }
 
         .category-icon {
             width: 70px;
@@ -519,8 +576,10 @@
         .category-men .category-icon,
         .category-immune .category-icon,
         .category-sleep .category-icon,
-        .category-probiotics .category-icon {
+        .category-probiotics .category-icon,
+        .category-skin .category-icon {
             background: rgba(0, 0, 0, 0.15);
+            color: #333;
         }
 
         .category-card h3 {
@@ -542,8 +601,93 @@
         .category-men p,
         .category-immune p,
         .category-sleep p,
-        .category-probiotics p {
+        .category-probiotics p,
+        .category-skin p {
             color: #333;
+        }
+
+        /* Brand Directory Section */
+        .brand-directory {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f0f2ff 0%, #e8ebff 100%);
+        }
+
+        .alphabet-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .letter-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #f0f2ff;
+            border-radius: 50%;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 16px;
+            transition: var(--transition);
+        }
+
+        .letter-link:hover,
+        .letter-link.active {
+            background: var(--gradient);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .brands-by-letter {
+            display: none;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+            padding: 30px;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        .brands-by-letter.active {
+            display: grid;
+        }
+
+        .brand-item {
+            padding: 15px;
+            background: #f8f9ff;
+            border-radius: 8px;
+            transition: var(--transition);
+            cursor: pointer;
+            border-left: 4px solid var(--primary);
+        }
+
+        .brand-item:hover {
+            background: #f0f2ff;
+            transform: translateX(5px);
+            border-left-color: var(--accent);
+        }
+
+        .brand-item h4 {
+            color: var(--dark);
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .brand-item p {
+            color: var(--gray);
+            font-size: 13px;
+            font-style: italic;
         }
 
         /* Why Choose Wellora Section */
@@ -737,7 +881,7 @@
                 display: none;
             }
             
-            .categories-grid, .brands-grid, .benefits-grid {
+            .categories-grid, .brands-grid, .benefits-grid, .brands-by-letter {
                 grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             }
         }
@@ -753,6 +897,21 @@
             
             .categories-grid, .brands-grid, .benefits-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .brands-by-letter {
+                grid-template-columns: 1fr;
+                max-height: 400px;
+            }
+            
+            .alphabet-nav {
+                gap: 8px;
+            }
+            
+            .letter-link {
+                width: 35px;
+                height: 35px;
+                font-size: 14px;
             }
         }
 
@@ -782,6 +941,16 @@
                 padding: 30px 20px;
                 min-height: 180px;
             }
+            
+            .alphabet-nav {
+                gap: 5px;
+            }
+            
+            .letter-link {
+                width: 30px;
+                height: 30px;
+                font-size: 12px;
+            }
         }
     </style>
 </head>
@@ -803,15 +972,15 @@
                 </a>
                 
                 <div class="nav-links">
-                    <a href="#">Shop</a>
+                    <a href="#" onclick="redirectToStore()">Shop</a>
                     <a href="#categories">Categories</a>
                     <a href="#brands">Brands</a>
-                    <a href="#">Blog</a>
+                    <a href="#brand-directory">All Brands</a>
                     <a href="#">Contact</a>
                 </div>
                 
                 <div class="header-actions">
-                    <div class="cart-icon">
+                    <div class="cart-icon" onclick="redirectToStore()">
                         <i class="fas fa-shopping-bag"></i>
                         <div class="cart-count">3</div>
                     </div>
@@ -835,23 +1004,23 @@
                     <h3 class="brands-title">Premium Brands We Trust</h3>
                     <div class="brands-grid">
                         <!-- Thorne -->
-                        <div class="brand-card brand-thorne" onclick="window.open('https://us.fullscript.com/welcome/thewellnessemporium/store-start', '_blank')">
+                        <div class="brand-card brand-thorne" onclick="redirectToStore()">
                             <div class="brand-logo-container">
                                 <img src="https://www.thorne.com/images/logos/thorne-logo.png" alt="Thorne" class="brand-logo">
                             </div>
                             <div class="brand-name">Thorne</div>
                             <div class="brand-tagline">Research-Backed Supplements</div>
-                            <a class="brand-button">Shop Thorne</a>
+                            <a class="brand-button" onclick="redirectToStore()">Shop Thorne</a>
                         </div>
                         
                         <!-- Pure Encapsulations -->
-                        <div class="brand-card brand-pure" onclick="window.open('https://us.fullscript.com/welcome/thewellnessemporium/store-start', '_blank')">
+                        <div class="brand-card brand-pure" onclick="redirectToStore()">
                             <div class="brand-logo-container">
                                 <img src="https://www.pureencapsulations.com/media/logo/stores/1/pe_logo_2.png" alt="Pure Encapsulations" class="brand-logo">
                             </div>
                             <div class="brand-name">Pure Encapsulations</div>
                             <div class="brand-tagline">Pure & Hypoallergenic</div>
-                            <a class="brand-button">Shop Pure</a>
+                            <a class="brand-button" onclick="redirectToStore()">Shop Pure</a>
                         </div>
                     </div>
                 </div>
@@ -866,44 +1035,44 @@
             <p class="section-subtitle">We carefully select brands that meet our high standards for quality, purity, and efficacy</p>
             
             <div class="brands-grid">
-                <!-- Designs for Health - Now Purple -->
-                <div class="brand-card brand-designs" onclick="window.open('https://us.fullscript.com/welcome/thewellnessemporium/store-start', '_blank')">
+                <!-- Designs for Health -->
+                <div class="brand-card brand-designs" onclick="redirectToStore()">
                     <div class="brand-logo-container">
                         <img src="https://www.designsforhealth.com/themes/custom/dfh/images/logo.svg" alt="Designs for Health" class="brand-logo">
                     </div>
                     <div class="brand-name">Designs for Health</div>
                     <div class="brand-tagline">Practitioner-Grade Formulas</div>
-                    <a class="brand-button">Shop Designs</a>
+                    <a class="brand-button" onclick="redirectToStore()">Shop Designs</a>
                 </div>
                 
-                <!-- Metagenics - Now Teal -->
-                <div class="brand-card brand-metagenics" onclick="window.open('https://us.fullscript.com/welcome/thewellnessemporium/store-start', '_blank')">
+                <!-- Metagenics -->
+                <div class="brand-card brand-metagenics" onclick="redirectToStore()">
                     <div class="brand-logo-container">
                         <img src="https://www.metagenics.com/wp-content/themes/metagenics/assets/images/logo.png" alt="Metagenics" class="brand-logo">
                     </div>
                     <div class="brand-name">Metagenics</div>
                     <div class="brand-tagline">Medical Food Solutions</div>
-                    <a class="brand-button">Shop Metagenics</a>
+                    <a class="brand-button" onclick="redirectToStore()">Shop Metagenics</a>
                 </div>
                 
                 <!-- Gaia Herbs -->
-                <div class="brand-card brand-gaia" onclick="window.open('https://us.fullscript.com/welcome/thewellnessemporium/store-start', '_blank')">
+                <div class="brand-card brand-gaia" onclick="redirectToStore()">
                     <div class="brand-logo-container">
                         <img src="https://www.gaiaherbs.com/skin/frontend/gaia/default/images/logo.svg" alt="Gaia Herbs" class="brand-logo">
                     </div>
                     <div class="brand-name">Gaia Herbs</div>
                     <div class="brand-tagline">Organic Plant-Based Formulas</div>
-                    <a class="brand-button">Shop Gaia</a>
+                    <a class="brand-button" onclick="redirectToStore()">Shop Gaia</a>
                 </div>
                 
-                <!-- NOW Foods - Now Maroon -->
-                <div class="brand-card brand-now" onclick="window.open('https://us.fullscript.com/welcome/thewellnessemporium/store-start', '_blank')">
+                <!-- NOW Foods -->
+                <div class="brand-card brand-now" onclick="redirectToStore()">
                     <div class="brand-logo-container">
                         <img src="https://www.nowfoods.com/sites/all/themes/nowfoods_theme/logo.png" alt="NOW Foods" class="brand-logo">
                     </div>
                     <div class="brand-name">NOW Foods</div>
                     <div class="brand-tagline">Quality & Value Since 1968</div>
-                    <a class="brand-button">Shop NOW</a>
+                    <a class="brand-button" onclick="redirectToStore()">Shop NOW</a>
                 </div>
             </div>
         </div>
@@ -918,6 +1087,28 @@
             <div class="categories-grid" id="categoriesGrid">
                 <!-- Category cards will be generated by JavaScript with colorful backgrounds -->
             </div>
+        </div>
+    </section>
+
+    <!-- Brand Directory Section -->
+    <section class="brand-directory" id="brand-directory">
+        <div class="container">
+            <h2 class="section-title">Our Complete Brand Directory</h2>
+            <p class="section-subtitle">Browse our extensive collection of premium wellness brands alphabetically</p>
+            
+            <div class="alphabet-nav" id="alphabetNav">
+                <!-- Alphabet letters will be generated by JavaScript -->
+            </div>
+            
+            <div class="brands-by-letter active" id="brandsA">
+                <!-- Brands starting with A will be loaded here -->
+            </div>
+            
+            <div class="brands-by-letter" id="brandsB">
+                <!-- Brands starting with B will be loaded here -->
+            </div>
+            
+            <!-- More letter sections will be generated by JavaScript -->
         </div>
     </section>
 
@@ -981,10 +1172,10 @@
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#">Shop All</a></li>
+                        <li><a href="#" onclick="redirectToStore()">Shop All</a></li>
                         <li><a href="#categories">Categories</a></li>
                         <li><a href="#brands">Brands</a></li>
-                        <li><a href="#">Bundle & Save</a></li>
+                        <li><a href="#brand-directory">All Brands</a></li>
                         <li><a href="#">Subscription</a></li>
                     </ul>
                 </div>
@@ -1017,7 +1208,15 @@
     </footer>
 
     <script>
-        // Category data with icons and color classes
+        // Store URL
+        const storeUrl = "https://us.fullscript.com/welcome/thewellnessemporium/store-start";
+        
+        // Redirect function
+        function redirectToStore() {
+            window.open(storeUrl, '_blank');
+        }
+        
+        // Category data with icons and color classes - UPDATED
         const categories = [
             { name: "Gut Health", desc: "Probiotics and digestive enzymes", icon: "fas fa-stomach", colorClass: "category-gut" },
             { name: "Women's Health", desc: "Hormone balance and vitality", icon: "fas fa-venus", colorClass: "category-women" },
@@ -1035,6 +1234,150 @@
             { name: "Hormone Support", desc: "Endocrine system balance", icon: "fas fa-balance-scale", colorClass: "category-hormone" }
         ];
 
+        // All brands data organized by letter
+        const allBrands = {
+            A: [
+                "A.C. Grace", "Active Skin Repair", "Advanced Naturals", "Advanced Nutrition by Zahler", 
+                "Aidan Corp", "Alembic Herbals by Kan", "AlgaeCal", "All Good", "All Terrain", 
+                "Allergy Research Group", "Allimax Nutraceuticals", "Alphascience", "Amen", 
+                "American BioSciences", "American BioTech Labs", "American Nutriceuticals", 
+                "Amrita Aromatherapy", "Amy Myers MD", "Anabolic Laboratories", "Ancient Nutrition", 
+                "AnteAGE", "AOR US", "Apex Energetics, Inc", "Aqua Biome", "Argentyn 23", 
+                "Arthur Andrew Medical", "Atrantil", "Aura Cacia", "Ayush Herbs"
+            ],
+            B: [
+                "Baar Products", "Babo Botanicals", "Badger", "Baebody", "Banyan Botanicals", 
+                "Bariatric Advantage", "Bariatric Fusion", "Barlean's Organic Oils", "Beekeeper's Naturals", 
+                "Begin Health", "Bergamet", "Berkeley Life", "Bezwecken", "BHI Homeopathics/Medinatura", 
+                "Big Bold Health", "Bio Essence Health Science", "Bio-Design", "Bio-Nutritional Formulas", 
+                "Bio-Tech Pharmacal", "Biocidin Botanicals", "Bioclinic Naturals", "Bioelements", 
+                "Biogena", "BioMatrix", "BioPharma Scientific", "BioProtein Technology", "Biosil®", 
+                "Biospec Nutritionals", "Biotics Research", "Blue Poppy", "Body Bio", "BodyHealth", 
+                "Boericke & Tafel", "Boiron Homeopathics", "Books/Media", "BrainMD", "Bubs Naturals", 
+                "Buddha Teas", "Buried Treasure", "Burt's Bees", "BWH Labs"
+            ],
+            C: [
+                "Calocurb", "Calroy Health Sciences", "Cardiosmile", "Carlson Labs", "CBD CLINIC", 
+                "Celtic Sea Salt", "Ceramedx", "Chapter One Vitamins", "Charlotte's Web", 
+                "Chinese Modular Solutions by Kan", "Codeage", "Core Products", "Crystal"
+            ],
+            D: [
+                "D'Adamo Personalized Nutrition", "Daiwa Health Development", "DaVinci Labs", 
+                "DermaE Natural Bodycare", "Desert Essence", "Designs for Health", "Designs For Sport", 
+                "Deva Nutrition", "Doctor Wilson's Original Formulations", "Dome Beauty", "Douglas Labs", 
+                "Dr. Hauschka Skincare", "Dr. Mercola Premium Products", "Dr's Advantage"
+            ],
+            E: [
+                "Earth Science", "Ecological Formulas/Cardiovascular Research", "EcoNugenics", 
+                "ECS Therapeutics", "Eidon", "Emerita", "Empirical Labs", "Enbiosis", "EndoAxis", 
+                "Endurance Products", "Energetix", "Energique", "Enviromedica", "Enzyme Science", 
+                "Enzymedica", "Essential Formulas", "EuroMedica", "Eye Promise"
+            ],
+            F: [
+                "Fairhaven Health", "fatty15", "Fenix Nutrition", "Flora", "FODZYME", "Foods Alive", 
+                "Forces of Nature", "Four Sigmatic", "Fx Chocolate"
+            ],
+            G: [
+                "Gaia Herbs", "Gaia Herbs Pro", "Garden of Life", "Garden of Life Sport", "Genate", 
+                "Geronova", "Giovanni Cosmetics", "Global Healing Center", "Glocalcure", "Glowbiotics", 
+                "Goddess Garden", "Good Clean Love", "Greens First", "GUNA Biotherapeutics"
+            ],
+            H: [
+                "Health Aid America", "Health Concerns", "Herb Pharm", "Herbalist & Alchemist", 
+                "Heritage Store", "Himalaya Wellness", "Host Defense", "HumanN", "Hyalogic"
+            ],
+            I: [
+                "i-Health", "IM8", "Immune Health Basics", "Immunocologie Skincare", "InfiniWell", 
+                "Innate Response", "Integrative Therapeutics", "InterPlexus", "Inwell Biosciences", 
+                "ION* Intelligence of Nature"
+            ],
+            J: [
+                "Jade Dragon", "Jade Woman Herbals by Kan", "Jadience Herbal Formulas", "Jarrow Formulas", 
+                "Jigsaw Health"
+            ],
+            K: [
+                "KAL", "Kan Herb - Singles", "Kan Herb Company", "Kan Herbs - Essentials", 
+                "Kan Herbs - Herbals", "Kan Herbs - Traditionals", "Karuna", "Kibow Biotech", 
+                "Kirkman Professional", "Klaire Labs/SFI Health", "Klean Athlete", "Kolorex"
+            ],
+            L: [
+                "LaFlore", "Lane Innovative", "Lane Medical", "Lidtke Medical", "Lidtke Technologies", 
+                "Life Extension", "Lifespan Health Science", "LifeWorks Nutritionals", "Little DaVinci", 
+                "Longevity Science"
+            ],
+            M: [
+                "Maiome", "Manuka Health", "ManukaGuard", "Master Supplements", "Master Supplements Professional", 
+                "MDbio", "MDSolarSciences", "MediHerb", "MediNatura", "MegaFood", "Mend", "Metabolic Code", 
+                "Metabolic Maintenance", "Metabolic Response Modifier", "Metagenics", "MethylPro", 
+                "Microbiome Labs", "Mirabella Beauty", "MitoQ", "Montiff", "Moon Valley Organics", 
+                "MuscleCare", "Mushroom Wisdom", "MyChelle", "MycoHerb by Kan"
+            ],
+            N: [
+                "Natura Health Products", "Natural Factors", "Natural Path Silver Wings", "Natural Stacks", 
+                "Natural Vitality", "Nature's Way", "NatureWorks", "NBI", "Needed", "Nelson Bach", 
+                "Ness Enzymes", "Neurobiologix", "NeuroScience", "New Chapter", "New Earth Life Science", 
+                "Newton Laboratories Inc", "Nordic Naturals", "NOW Foods", "NOW Sports", "NOW/Personal Care", 
+                "NuMedica", "Nutra BioGenesis", "Nutraceutics", "NutraMedix, LLC", "Nutrasal", "Nutribiotic", 
+                "Nutricology", "Nutritional Frontiers", "Nutritional Fundamentals for Health"
+            ],
+            O: [
+                "Ollois", "Om Organic Mushroom Nutrition", "OmegaQuant", "Omne Diem", "Omni-Biotic", 
+                "Ora Organic", "Organic Excellence", "Organic India", "Ortho Molecular Products"
+            ],
+            P: [
+                "Pacific Biologic", "Pastore Formulations", "Patient One MediNutritionals", "Pendulum", 
+                "PERQUE®", "Pharmax", "Planetary Herbals", "PlusCBD Oil", "Premier Research Labs", 
+                "Priority One", "Professional Botanicals", "Professional Formulas", "Professional Health Products", 
+                "Progena", "Progressive Labs", "ProLon", "Proper Nutrition", "Protocol for Life Balance", 
+                "Pure Encapsulations", "Purest Mushrooms"
+            ],
+            Q: [
+                "QOL Labs", "Qualia Life Sciences", "Quicksilver Scientific"
+            ],
+            R: [
+                "Rainbow Light Nutrition", "Readisorb", "Real Mushrooms", "Realize Therapeutics", 
+                "Regular Girl", "Renew Life", "Resbiotic Nutrition", "Researched Nutritionals", 
+                "Reserveage", "Restorative Formulations", "Results RNA", "Return Healthy", "Ritual", 
+                "Rosita Real Foods™", "Ruby Blue Bunny", "Rx Sugar", "Rx Vitamins", "Rx Vitamins for Pets"
+            ],
+            S: [
+                "Sabre Sciences", "Sage Solutions by Kan", "Salus/Floradix", "Sanesco", "Seed", 
+                "Seeking Health", "Serola Biomechanics", "Seroyal/Genestra", "Seroyal/Unda", 
+                "Shankara, Inc.", "Skinesa", "SmartyPants Vitamins", "Smidge (formerly Organic3)", 
+                "Solaray", "Sombra", "Source Naturals", "Sovereign Copper", "Sovereign Silver", 
+                "Spectrum Awakening", "Square 1", "Standard Process", "Stream2Sea", "suki skincare", 
+                "Sun Chlorella USA", "Sunwarrior", "Symbiotics", "Symphony Natural Health"
+            ],
+            T: [
+                "Targeted Medical Pharma, Inc", "TCM Zone", "TCMCeuticals", "Terry Naturally", 
+                "Tesseract Medical Research", "Theralogix", "Theramedix BioSET", "Theraneem", "Thorne", 
+                "Thorne Vet", "Thyroid Specific Formulations", "Tiger Balm", "Tomorrow's Nutrition", 
+                "Trace Minerals Research", "Transformation Enzymes", "Treasure of the East", 
+                "Tru Niagen® by ChromaDex"
+            ],
+            U: [
+                "U.S. Enzymes"
+            ],
+            V: [
+                "Vetri-Science Laboratories", "Vibrant Health", "Vinco", "Vita Aid Professional Therapeutics", 
+                "Vital Nutrients", "Vital Proteins", "Vitanica", "Vitazan Professional", "Viviscal", 
+                "VSL#3", "VSL4"
+            ],
+            W: [
+                "Wakunaga", "Weber & Weber", "Weleda", "Well Wisdom", "Wellex", "WeNatal", 
+                "White Egret", "Wileys Finest Fish Oils", "Wise Woman Herbals", "World Nutrition"
+            ],
+            X: [
+                "Xlear", "XYMOGEN"
+            ],
+            Y: [
+                // No brands starting with Y in the provided list
+            ],
+            Z: [
+                "ZHOU Nutrition", "Zint Nutrition", "ZyCal Bioceuticals - Ostinol"
+            ]
+        };
+
         // Function to create category cards with colorful backgrounds
         function createCategoryCards() {
             const grid = document.getElementById('categoriesGrid');
@@ -1051,12 +1394,78 @@
                 `;
                 
                 // Add click event to redirect to Fullscript store
-                card.addEventListener('click', function() {
-                    window.open('https://us.fullscript.com/welcome/thewellnessemporium/store-start', '_blank');
-                });
+                card.addEventListener('click', redirectToStore);
                 
                 grid.appendChild(card);
             });
+        }
+
+        // Function to create alphabet navigation
+        function createAlphabetNav() {
+            const alphabetNav = document.getElementById('alphabetNav');
+            const letters = Object.keys(allBrands);
+            
+            letters.forEach(letter => {
+                const link = document.createElement('a');
+                link.className = 'letter-link';
+                link.href = `#brand-directory`;
+                link.textContent = letter;
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showBrandsByLetter(letter);
+                    
+                    // Update active class
+                    document.querySelectorAll('.letter-link').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                });
+                
+                alphabetNav.appendChild(link);
+            });
+            
+            // Activate first letter by default
+            if (letters.length > 0) {
+                document.querySelector('.letter-link').classList.add('active');
+                showBrandsByLetter(letters[0]);
+            }
+        }
+
+        // Function to show brands by letter
+        function showBrandsByLetter(letter) {
+            // Hide all brand sections
+            document.querySelectorAll('.brands-by-letter').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show selected brand section
+            const sectionId = `brands${letter}`;
+            let section = document.getElementById(sectionId);
+            
+            // If section doesn't exist, create it
+            if (!section) {
+                section = document.createElement('div');
+                section.id = sectionId;
+                section.className = 'brands-by-letter';
+                document.querySelector('#brand-directory .container').appendChild(section);
+            }
+            
+            // Clear and populate the section
+            section.innerHTML = '';
+            
+            if (allBrands[letter] && allBrands[letter].length > 0) {
+                allBrands[letter].forEach(brandName => {
+                    const brandItem = document.createElement('div');
+                    brandItem.className = 'brand-item';
+                    brandItem.innerHTML = `<h4>${brandName}</h4>`;
+                    brandItem.addEventListener('click', redirectToStore);
+                    section.appendChild(brandItem);
+                });
+            } else {
+                section.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--gray);">No brands found for this letter.</p>';
+            }
+            
+            section.classList.add('active');
         }
 
         // Function to handle image errors (fallback to brand name)
@@ -1073,6 +1482,9 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Create category cards with colorful backgrounds
             createCategoryCards();
+            
+            // Create alphabet navigation and brand directory
+            createAlphabetNav();
             
             // Set up image error handling
             document.querySelectorAll('.brand-logo').forEach(img => {
@@ -1097,7 +1509,7 @@
             }, observerOptions);
             
             // Observe all interactive cards
-            document.querySelectorAll('.category-card, .brand-card, .benefit-card').forEach(element => {
+            document.querySelectorAll('.category-card, .brand-card, .benefit-card, .brand-item').forEach(element => {
                 element.style.opacity = '0';
                 element.style.transform = 'translateY(20px)';
                 element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
@@ -1108,10 +1520,7 @@
             const cartIcon = document.querySelector('.cart-icon');
             const cartCount = document.querySelector('.cart-count');
             
-            cartIcon.addEventListener('click', function() {
-                alert('Your cart has 3 items. Redirecting to checkout...');
-                window.open('https://us.fullscript.com/welcome/thewellnessemporium/store-start', '_blank');
-            });
+            cartIcon.addEventListener('click', redirectToStore);
             
             // Newsletter form submission
             const newsletterForm = document.querySelector('.newsletter-form');
@@ -1143,8 +1552,16 @@
                     e.stopPropagation(); // Prevent triggering the card click
                     const brandName = this.closest('.brand-card').querySelector('.brand-name').textContent;
                     alert(`Shopping for ${brandName} products...`);
-                    window.open('https://us.fullscript.com/welcome/thewellnessemporium/store-start', '_blank');
+                    redirectToStore();
                 });
+            });
+            
+            // Add click event to Shop link in header
+            document.querySelector('a[href="#"]').addEventListener('click', function(e) {
+                if (this.textContent === 'Shop') {
+                    e.preventDefault();
+                    redirectToStore();
+                }
             });
         });
     </script>
