@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wellora | Wellness Essentials for Modern Living</title>
+    <title>Wellora | Premium Wellness Supplements</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
     <style>
@@ -19,6 +19,14 @@
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             --radius: 12px;
             --transition: all 0.3s ease;
+            
+            /* Brand Colors */
+            --thorne-color: #1a73e8;
+            --pure-color: #00a86b;
+            --designs-color: #ff6b35;
+            --metagenics-color: #8a2be2;
+            --gaia-color: #2e8b57;
+            --now-color: #ff4500;
         }
 
         * {
@@ -243,19 +251,10 @@
             box-shadow: 0 15px 25px rgba(124, 77, 255, 0.4);
         }
 
-        .hero-image {
-            position: relative;
-        }
-
-        .hero-image img {
-            width: 100%;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-        }
-
-        /* Categories Section */
-        .categories {
+        /* Premium Brands Section */
+        .premium-brands {
             padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
         }
 
         .section-title {
@@ -274,6 +273,160 @@
             margin-left: auto;
             margin-right: auto;
             font-size: 18px;
+        }
+
+        .brands-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            margin-bottom: 40px;
+            text-align: center;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .brands-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--gradient);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .brand-card {
+            border-radius: var(--radius);
+            padding: 40px 25px;
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .brand-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .brand-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Individual Brand Background Colors */
+        .brand-thorne {
+            background: linear-gradient(135deg, var(--thorne-color) 0%, #4d94ff 100%);
+            color: white;
+        }
+
+        .brand-pure {
+            background: linear-gradient(135deg, var(--pure-color) 0%, #00cc7a 100%);
+            color: white;
+        }
+
+        .brand-designs {
+            background: linear-gradient(135deg, var(--designs-color) 0%, #ff8c5a 100%);
+            color: white;
+        }
+
+        .brand-metagenics {
+            background: linear-gradient(135deg, var(--metagenics-color) 0%, #a855f7 100%);
+            color: white;
+        }
+
+        .brand-gaia {
+            background: linear-gradient(135deg, var(--gaia-color) 0%, #3cb371 100%);
+            color: white;
+        }
+
+        .brand-now {
+            background: linear-gradient(135deg, var(--now-color) 0%, #ff6b35 100%);
+            color: white;
+        }
+
+        .brand-logo-container {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 120px;
+            height: 80px;
+        }
+
+        .brand-logo {
+            max-width: 100%;
+            max-height: 50px;
+            filter: brightness(0) invert(1);
+            transition: var(--transition);
+        }
+
+        .brand-card:hover .brand-logo {
+            transform: scale(1.1);
+        }
+
+        .brand-name {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .brand-tagline {
+            font-size: 14px;
+            opacity: 0.9;
+            font-weight: 300;
+            max-width: 200px;
+        }
+
+        .brand-button {
+            margin-top: 20px;
+            padding: 8px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: var(--transition);
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .brand-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Categories Section */
+        .categories {
+            padding: 80px 0;
         }
 
         .categories-grid {
@@ -322,6 +475,57 @@
         .category-card p {
             color: var(--gray);
             font-size: 14px;
+        }
+
+        /* Why Choose Wellora Section */
+        .why-choose {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9ff 0%, #eef1ff 100%);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .benefit-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 28px;
+        }
+
+        .benefit-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .benefit-card p {
+            color: var(--gray);
+            font-size: 15px;
         }
 
         /* Footer */
@@ -464,7 +668,7 @@
                 display: none;
             }
             
-            .categories-grid {
+            .categories-grid, .brands-grid, .benefits-grid {
                 grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             }
         }
@@ -474,11 +678,11 @@
                 font-size: 36px;
             }
             
-            .section-title {
+            .section-title, .brands-title {
                 font-size: 32px;
             }
             
-            .categories-grid {
+            .categories-grid, .brands-grid, .benefits-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -492,7 +696,7 @@
                 font-size: 32px;
             }
             
-            .categories-grid {
+            .categories-grid, .brands-grid, .benefits-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -503,6 +707,11 @@
             
             .footer-content {
                 grid-template-columns: 1fr;
+            }
+            
+            .brand-card {
+                padding: 30px 20px;
+                min-height: 180px;
             }
         }
     </style>
@@ -526,8 +735,8 @@
                 
                 <div class="nav-links">
                     <a href="#">Shop</a>
-                    <a href="#">Categories</a>
-                    <a href="#">About</a>
+                    <a href="#categories">Categories</a>
+                    <a href="#brands">Brands</a>
                     <a href="#">Blog</a>
                     <a href="#">Contact</a>
                 </div>
@@ -547,25 +756,140 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Wellness Essentials for Your Modern Lifestyle</h1>
-                    <p>Discover premium supplements for gut health, immunity, sleep, cognition, and more. Formulated with science-backed ingredients to support your wellbeing journey.</p>
+                    <h1>Premium Wellness, Powered by Science</h1>
+                    <p>Discover clinically-backed supplements from the world's most trusted brands. Formulated to support your unique health journey with purity and potency.</p>
                     <a href="https://us.fullscript.com/welcome/thewellnessemporium/store-start" target="_blank" class="cta-button">Shop Now & Save 20%</a>
                 </div>
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Wellora Wellness Products">
+                
+                <!-- Top Brands Section in Hero -->
+                <div class="top-brands">
+                    <h3 class="brands-title">Premium Brands We Trust</h3>
+                    <div class="brands-grid">
+                        <!-- Thorne -->
+                        <div class="brand-card brand-thorne" onclick="window.open('https://us.fullscript.com/welcome/thewellnessemporium/store-start', '_blank')">
+                            <div class="brand-logo-container">
+                                <img src="https://www.thorne.com/images/logos/thorne-logo.png" alt="Thorne" class="brand-logo">
+                            </div>
+                            <div class="brand-name">Thorne</div>
+                            <div class="brand-tagline">Research-Backed Supplements</div>
+                            <a class="brand-button">Shop Thorne</a>
+                        </div>
+                        
+                        <!-- Pure Encapsulations -->
+                        <div class="brand-card brand-pure" onclick="window.open('https://us.fullscript.com/welcome/thewellnessemporium/store-start', '_blank')">
+                            <div class="brand-logo-container">
+                                <img src="https://www.pureencapsulations.com/media/logo/stores/1/pe_logo_2.png" alt="Pure Encapsulations" class="brand-logo">
+                            </div>
+                            <div class="brand-name">Pure Encapsulations</div>
+                            <div class="brand-tagline">Pure & Hypoallergenic</div>
+                            <a class="brand-button">Shop Pure</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Brands Section -->
+    <section class="premium-brands" id="brands">
+        <div class="container">
+            <h2 class="section-title">Our Premium Brand Partners</h2>
+            <p class="section-subtitle">We carefully select brands that meet our high standards for quality, purity, and efficacy</p>
+            
+            <div class="brands-grid">
+                <!-- Designs for Health -->
+                <div class="brand-card brand-designs" onclick="window.open('https://us.fullscript.com/welcome/thewellnessemporium/store-start', '_blank')">
+                    <div class="brand-logo-container">
+                        <img src="https://www.designsforhealth.com/themes/custom/dfh/images/logo.svg" alt="Designs for Health" class="brand-logo">
+                    </div>
+                    <div class="brand-name">Designs for Health</div>
+                    <div class="brand-tagline">Practitioner-Grade Formulas</div>
+                    <a class="brand-button">Shop Designs</a>
+                </div>
+                
+                <!-- Metagenics -->
+                <div class="brand-card brand-metagenics" onclick="window.open('https://us.fullscript.com/welcome/thewellnessemporium/store-start', '_blank')">
+                    <div class="brand-logo-container">
+                        <img src="https://www.metagenics.com/wp-content/themes/metagenics/assets/images/logo.png" alt="Metagenics" class="brand-logo">
+                    </div>
+                    <div class="brand-name">Metagenics</div>
+                    <div class="brand-tagline">Medical Food Solutions</div>
+                    <a class="brand-button">Shop Metagenics</a>
+                </div>
+                
+                <!-- Gaia Herbs -->
+                <div class="brand-card brand-gaia" onclick="window.open('https://us.fullscript.com/welcome/thewellnessemporium/store-start', '_blank')">
+                    <div class="brand-logo-container">
+                        <img src="https://www.gaiaherbs.com/skin/frontend/gaia/default/images/logo.svg" alt="Gaia Herbs" class="brand-logo">
+                    </div>
+                    <div class="brand-name">Gaia Herbs</div>
+                    <div class="brand-tagline">Organic Plant-Based Formulas</div>
+                    <a class="brand-button">Shop Gaia</a>
+                </div>
+                
+                <!-- NOW Foods -->
+                <div class="brand-card brand-now" onclick="window.open('https://us.fullscript.com/welcome/thewellnessemporium/store-start', '_blank')">
+                    <div class="brand-logo-container">
+                        <img src="https://www.nowfoods.com/sites/all/themes/nowfoods_theme/logo.png" alt="NOW Foods" class="brand-logo">
+                    </div>
+                    <div class="brand-name">NOW Foods</div>
+                    <div class="brand-tagline">Quality & Value Since 1968</div>
+                    <a class="brand-button">Shop NOW</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Categories Section -->
-    <section class="categories">
+    <section class="categories" id="categories">
         <div class="container">
-            <h2 class="section-title">Explore by Wellness Goals</h2>
-            <p class="section-subtitle">Targeted supplements for every aspect of your health. Click any category to explore products.</p>
+            <h2 class="section-title">Targeted Wellness Solutions</h2>
+            <p class="section-subtitle">Explore our curated collections based on your specific health goals and needs.</p>
             
             <div class="categories-grid">
                 <!-- Category cards will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Wellora Section -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Choose Wellora</h2>
+            <p class="section-subtitle">We're committed to providing the highest quality wellness products</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Science-Backed</h3>
+                    <p>All our products are formulated based on clinical research and scientific evidence.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Quality Assured</h3>
+                    <p>Third-party tested for purity, potency, and safety. No fillers or artificial additives.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Free Shipping</h3>
+                    <p>Free shipping on all orders over $50. Fast, reliable delivery to your doorstep.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Expert Support</h3>
+                    <p>Our wellness experts are here to help you find the right products for your needs.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -589,8 +913,8 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#">Shop All</a></li>
-                        <li><a href="#">Best Sellers</a></li>
-                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#brands">Brands</a></li>
                         <li><a href="#">Bundle & Save</a></li>
                         <li><a href="#">Subscription</a></li>
                     </ul>
@@ -618,7 +942,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Wellora. All rights reserved. | This site is for demonstration purposes only.</p>
+                <p>&copy; 2023 Wellora. All rights reserved. | This site is for demonstration purposes only. Brand logos are property of their respective owners.</p>
             </div>
         </div>
     </footer>
@@ -666,11 +990,29 @@
             });
         }
 
+        // Function to handle image errors (fallback to brand name)
+        function handleImageError(img) {
+            const brandCard = img.closest('.brand-card');
+            const brandName = brandCard.querySelector('.brand-name').textContent;
+            
+            // Replace broken image with brand initial
+            const logoContainer = img.parentElement;
+            logoContainer.innerHTML = `<div style="font-size: 28px; font-weight: 700;">${brandName.charAt(0)}</div>`;
+        }
+
         // Initialize when page loads
         document.addEventListener('DOMContentLoaded', function() {
+            // Create category cards
             createCategoryCards();
             
-            // Add animation to category cards on scroll
+            // Set up image error handling
+            document.querySelectorAll('.brand-logo').forEach(img => {
+                img.addEventListener('error', function() {
+                    handleImageError(this);
+                });
+            });
+            
+            // Add animation to elements on scroll
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
@@ -685,12 +1027,12 @@
                 });
             }, observerOptions);
             
-            // Observe category cards
-            document.querySelectorAll('.category-card').forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                observer.observe(card);
+            // Observe all interactive cards
+            document.querySelectorAll('.category-card, .brand-card, .benefit-card').forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(element);
             });
             
             // Add cart functionality
@@ -724,6 +1066,16 @@
             });
             ctaButton.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateY(0) scale(1)';
+            });
+            
+            // Brand button animations
+            document.querySelectorAll('.brand-button').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Prevent triggering the card click
+                    const brandName = this.closest('.brand-card').querySelector('.brand-name').textContent;
+                    alert(`Shopping for ${brandName} products...`);
+                    window.open('https://us.fullscript.com/welcome/thewellnessemporium/store-start', '_blank');
+                });
             });
         });
     </script>
