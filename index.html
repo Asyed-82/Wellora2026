@@ -20,13 +20,27 @@
             --radius: 12px;
             --transition: all 0.3s ease;
             
-            /* Brand Colors */
+            /* Brand Colors - Updated */
             --thorne-color: #1a73e8;
             --pure-color: #00a86b;
-            --designs-color: #ff6b35;
-            --metagenics-color: #8a2be2;
+            --designs-color: #800080; /* Changed from orange to purple */
+            --metagenics-color: #008080; /* Changed from purple to teal */
             --gaia-color: #2e8b57;
-            --now-color: #ff4500;
+            --now-color: #800000; /* Changed from orange to maroon */
+            
+            /* Category Colors */
+            --red: #FF0000;
+            --maroon: #800000;
+            --yellow: #FFFF00;
+            --olive: #808000;
+            --lime: #00FF00;
+            --green: #008000;
+            --aqua: #00FFFF;
+            --teal: #008080;
+            --blue: #0000FF;
+            --navy: #000080;
+            --fuchsia: #FF00FF;
+            --purple: #800080;
         }
 
         * {
@@ -337,7 +351,7 @@
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
 
-        /* Individual Brand Background Colors */
+        /* Individual Brand Background Colors - UPDATED */
         .brand-thorne {
             background: linear-gradient(135deg, var(--thorne-color) 0%, #4d94ff 100%);
             color: white;
@@ -349,12 +363,12 @@
         }
 
         .brand-designs {
-            background: linear-gradient(135deg, var(--designs-color) 0%, #ff8c5a 100%);
+            background: linear-gradient(135deg, var(--designs-color) 0%, #b347b3 100%); /* Purple */
             color: white;
         }
 
         .brand-metagenics {
-            background: linear-gradient(135deg, var(--metagenics-color) 0%, #a855f7 100%);
+            background: linear-gradient(135deg, var(--metagenics-color) 0%, #00b3b3 100%); /* Teal */
             color: white;
         }
 
@@ -364,7 +378,7 @@
         }
 
         .brand-now {
-            background: linear-gradient(135deg, var(--now-color) 0%, #ff6b35 100%);
+            background: linear-gradient(135deg, var(--now-color) 0%, #b30000 100%); /* Maroon */
             color: white;
         }
 
@@ -424,9 +438,10 @@
             transform: translateY(-2px);
         }
 
-        /* Categories Section */
+        /* Categories Section - COLORFUL BACKGROUNDS */
         .categories {
             padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9ff 0%, #eef1ff 100%);
         }
 
         .categories-grid {
@@ -437,7 +452,6 @@
         }
 
         .category-card {
-            background: white;
             border-radius: var(--radius);
             padding: 30px 25px;
             text-align: center;
@@ -445,18 +459,51 @@
             transition: var(--transition);
             cursor: pointer;
             border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            color: white;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
         }
 
         .category-card:hover {
             transform: translateY(-10px);
-            border-color: var(--primary-light);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
+
+        /* Individual Category Background Colors */
+        .category-gut { background: linear-gradient(135deg, var(--red) 0%, #ff4d4d 100%); }
+        .category-women { background: linear-gradient(135deg, var(--maroon) 0%, #b30000 100%); }
+        .category-men { background: linear-gradient(135deg, var(--yellow) 0%, #ffff4d 100%); color: #333; }
+        .category-immune { background: linear-gradient(135deg, var(--olive) 0%, #b3b300 100%); color: #333; }
+        .category-sleep { background: linear-gradient(135deg, var(--lime) 0%, #4dff4d 100%); color: #333; }
+        .category-stress { background: linear-gradient(135deg, var(--green) 0%, #00b300 100%); }
+        .category-probiotics { background: linear-gradient(135deg, var(--aqua) 0%, #4dffff 100%); color: #333; }
+        .category-methylation { background: linear-gradient(135deg, var(--teal) 0%, #00b3b3 100%); }
+        .category-protein { background: linear-gradient(135deg, var(--blue) 0%, #4d4dff 100%); }
+        .category-cognition { background: linear-gradient(135deg, var(--navy) 0%, #0000b3 100%); }
+        .category-thyroid { background: linear-gradient(135deg, var(--fuchsia) 0%, #ff4dff 100%); }
+        .category-bone { background: linear-gradient(135deg, var(--purple) 0%, #b347b3 100%); }
+        .category-skin { background: linear-gradient(135deg, var(--red) 0%, #ff4d4d 100%); }
+        .category-hormone { background: linear-gradient(135deg, var(--maroon) 0%, #b30000 100%); }
 
         .category-icon {
             width: 70px;
             height: 70px;
-            background: var(--gradient);
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -464,17 +511,39 @@
             margin: 0 auto 20px;
             color: white;
             font-size: 28px;
+            z-index: 2;
+            position: relative;
+        }
+
+        /* For categories with dark text, make icon background darker */
+        .category-men .category-icon,
+        .category-immune .category-icon,
+        .category-sleep .category-icon,
+        .category-probiotics .category-icon {
+            background: rgba(0, 0, 0, 0.15);
         }
 
         .category-card h3 {
             font-size: 20px;
             margin-bottom: 10px;
-            color: var(--dark);
+            color: inherit;
+            z-index: 2;
+            position: relative;
         }
 
         .category-card p {
-            color: var(--gray);
             font-size: 14px;
+            opacity: 0.9;
+            z-index: 2;
+            position: relative;
+        }
+
+        /* For categories with dark text */
+        .category-men p,
+        .category-immune p,
+        .category-sleep p,
+        .category-probiotics p {
+            color: #333;
         }
 
         /* Why Choose Wellora Section */
@@ -709,7 +778,7 @@
                 grid-template-columns: 1fr;
             }
             
-            .brand-card {
+            .brand-card, .category-card {
                 padding: 30px 20px;
                 min-height: 180px;
             }
@@ -797,7 +866,7 @@
             <p class="section-subtitle">We carefully select brands that meet our high standards for quality, purity, and efficacy</p>
             
             <div class="brands-grid">
-                <!-- Designs for Health -->
+                <!-- Designs for Health - Now Purple -->
                 <div class="brand-card brand-designs" onclick="window.open('https://us.fullscript.com/welcome/thewellnessemporium/store-start', '_blank')">
                     <div class="brand-logo-container">
                         <img src="https://www.designsforhealth.com/themes/custom/dfh/images/logo.svg" alt="Designs for Health" class="brand-logo">
@@ -807,7 +876,7 @@
                     <a class="brand-button">Shop Designs</a>
                 </div>
                 
-                <!-- Metagenics -->
+                <!-- Metagenics - Now Teal -->
                 <div class="brand-card brand-metagenics" onclick="window.open('https://us.fullscript.com/welcome/thewellnessemporium/store-start', '_blank')">
                     <div class="brand-logo-container">
                         <img src="https://www.metagenics.com/wp-content/themes/metagenics/assets/images/logo.png" alt="Metagenics" class="brand-logo">
@@ -827,7 +896,7 @@
                     <a class="brand-button">Shop Gaia</a>
                 </div>
                 
-                <!-- NOW Foods -->
+                <!-- NOW Foods - Now Maroon -->
                 <div class="brand-card brand-now" onclick="window.open('https://us.fullscript.com/welcome/thewellnessemporium/store-start', '_blank')">
                     <div class="brand-logo-container">
                         <img src="https://www.nowfoods.com/sites/all/themes/nowfoods_theme/logo.png" alt="NOW Foods" class="brand-logo">
@@ -846,8 +915,8 @@
             <h2 class="section-title">Targeted Wellness Solutions</h2>
             <p class="section-subtitle">Explore our curated collections based on your specific health goals and needs.</p>
             
-            <div class="categories-grid">
-                <!-- Category cards will be generated by JavaScript -->
+            <div class="categories-grid" id="categoriesGrid">
+                <!-- Category cards will be generated by JavaScript with colorful backgrounds -->
             </div>
         </div>
     </section>
@@ -913,7 +982,7 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#">Shop All</a></li>
-                        <li><a href="#">Categories</a></li>
+                        <li><a href="#categories">Categories</a></li>
                         <li><a href="#brands">Brands</a></li>
                         <li><a href="#">Bundle & Save</a></li>
                         <li><a href="#">Subscription</a></li>
@@ -948,31 +1017,31 @@
     </footer>
 
     <script>
-        // Category data with icons
+        // Category data with icons and color classes
         const categories = [
-            { name: "Gut Health", desc: "Probiotics and digestive enzymes", icon: "fas fa-stomach" },
-            { name: "Women's Health", desc: "Hormone balance and vitality", icon: "fas fa-venus" },
-            { name: "Men's Health", desc: "Performance and longevity", icon: "fas fa-mars" },
-            { name: "Immune Support", desc: "Boost your natural defenses", icon: "fas fa-shield-virus" },
-            { name: "Sleep & Relaxation", desc: "Restful sleep and calm", icon: "fas fa-moon" },
-            { name: "Stress Management", desc: "Adaptogens and calming herbs", icon: "fas fa-brain" },
-            { name: "Probiotics", desc: "Gut flora and microbiome", icon: "fas fa-bacteria" },
-            { name: "Methylation Support", desc: "Genetic and metabolic health", icon: "fas fa-dna" },
-            { name: "Protein & Fitness", desc: "Muscle recovery and energy", icon: "fas fa-dumbbell" },
-            { name: "Cognition & Focus", desc: "Mental clarity and concentration", icon: "fas fa-lightbulb" },
-            { name: "Thyroid & Mood", desc: "Energy and emotional balance", icon: "fas fa-cloud-sun" },
-            { name: "Bone & Joint", desc: "Mobility and skeletal health", icon: "fas fa-bone" },
-            { name: "Skin, Hair & Nails", desc: "Beauty from within", icon: "fas fa-spa" },
-            { name: "Hormone Support", desc: "Endocrine system balance", icon: "fas fa-balance-scale" }
+            { name: "Gut Health", desc: "Probiotics and digestive enzymes", icon: "fas fa-stomach", colorClass: "category-gut" },
+            { name: "Women's Health", desc: "Hormone balance and vitality", icon: "fas fa-venus", colorClass: "category-women" },
+            { name: "Men's Health", desc: "Performance and longevity", icon: "fas fa-mars", colorClass: "category-men" },
+            { name: "Immune Support", desc: "Boost your natural defenses", icon: "fas fa-shield-virus", colorClass: "category-immune" },
+            { name: "Sleep & Relaxation", desc: "Restful sleep and calm", icon: "fas fa-moon", colorClass: "category-sleep" },
+            { name: "Stress Management", desc: "Adaptogens and calming herbs", icon: "fas fa-brain", colorClass: "category-stress" },
+            { name: "Probiotics", desc: "Gut flora and microbiome", icon: "fas fa-bacteria", colorClass: "category-probiotics" },
+            { name: "Methylation Support", desc: "Genetic and metabolic health", icon: "fas fa-dna", colorClass: "category-methylation" },
+            { name: "Protein & Fitness", desc: "Muscle recovery and energy", icon: "fas fa-dumbbell", colorClass: "category-protein" },
+            { name: "Cognition & Focus", desc: "Mental clarity and concentration", icon: "fas fa-lightbulb", colorClass: "category-cognition" },
+            { name: "Thyroid & Mood", desc: "Energy and emotional balance", icon: "fas fa-cloud-sun", colorClass: "category-thyroid" },
+            { name: "Bone & Joint", desc: "Mobility and skeletal health", icon: "fas fa-bone", colorClass: "category-bone" },
+            { name: "Skin, Hair & Nails", desc: "Beauty from within", icon: "fas fa-spa", colorClass: "category-skin" },
+            { name: "Hormone Support", desc: "Endocrine system balance", icon: "fas fa-balance-scale", colorClass: "category-hormone" }
         ];
 
-        // Function to create category cards
+        // Function to create category cards with colorful backgrounds
         function createCategoryCards() {
-            const grid = document.querySelector('.categories-grid');
+            const grid = document.getElementById('categoriesGrid');
             
             categories.forEach(category => {
                 const card = document.createElement('div');
-                card.className = 'category-card';
+                card.className = `category-card ${category.colorClass}`;
                 card.innerHTML = `
                     <div class="category-icon">
                         <i class="${category.icon}"></i>
@@ -1002,7 +1071,7 @@
 
         // Initialize when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            // Create category cards
+            // Create category cards with colorful backgrounds
             createCategoryCards();
             
             // Set up image error handling
