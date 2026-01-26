@@ -6,17 +6,77 @@
     <title>Wellora Supplements - Premium Vitamins & Wellness Products Online</title>
     <meta name="description" content="Shop Wellora's premium vitamins and supplements online. Doctor-formulated, third-party tested wellness products with free shipping available.">
     
-    <!-- SEO Meta Tags for Better Google Search Results -->
-    <meta name="robots" content="index, follow">
-    <meta name="keywords" content="Wellora, supplements, vitamins, wellness, health, Thorne, Pure Encapsulations, Designs for Health, Metagenics, Gaia Herbs, NOW Foods">
-    <meta property="og:title" content="Wellora Supplements - Premium Vitamins & Wellness Products">
-    <meta property="og:description" content="Shop premium vitamins and supplements from trusted brands. Doctor-formulated, third-party tested wellness products.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://raw.githubusercontent.com/ed-82/wellorawithlogo/main/Wellora%20background%20removed.png">
-    <meta property="og:url" content="https://ed-82.github.io/wellorawithlogo/">
+    <!-- Essential SEO Tags -->
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="keywords" content="Wellora, supplements, vitamins, wellness, health, Thorne, Pure Encapsulations, Designs for Health, Metagenics, Gaia Herbs, NOW Foods, vitamins and minerals, dietary supplements">
+    <meta name="author" content="Wellora">
     
-    <!-- Favicon for Browser Tab -->
+    <!-- Canonical URL - IMPORTANT FOR SEO -->
+    <link rel="canonical" href="https://wellora.app/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wellora.app/">
+    <meta property="og:title" content="Wellora Supplements - Premium Vitamins & Wellness Products">
+    <meta property="og:description" content="Shop premium vitamins and supplements from trusted brands. Doctor-formulated, third-party tested wellness products with free shipping.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/ed-82/wellorawithlogo/main/Wellora%20background%20removed.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Wellora Logo - Premium Wellness Supplements">
+    <meta property="og:site_name" content="Wellora">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://wellora.app/">
+    <meta property="twitter:title" content="Wellora Supplements - Premium Vitamins & Wellness Products">
+    <meta property="twitter:description" content="Shop premium vitamins and supplements from trusted brands. Doctor-formulated, third-party tested wellness products.">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/ed-82/wellorawithlogo/main/Wellora%20background%20removed.png">
+    <meta name="twitter:site" content="@wellora">
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/ed-82/wellorawithlogo/main/Wellora%20background%20removed.png">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/ed-82/wellorawithlogo/main/Wellora%20background%20removed.png">
+    
+    <!-- Schema.org markup for Google - UPDATED WITH wellora.app -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HealthAndBeautyBusiness",
+        "name": "Wellora Supplements",
+        "image": "https://raw.githubusercontent.com/ed-82/wellorawithlogo/main/Wellora%20background%20removed.png",
+        "description": "Premium vitamins and wellness supplements from trusted brands",
+        "url": "https://wellora.app/",
+        "telephone": "+1-800-WELLORA",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US"
+        },
+        "openingHours": "Mo-Fr 09:00-17:00",
+        "priceRange": "$$",
+        "sameAs": [
+            "https://www.instagram.com/wellora",
+            "https://www.facebook.com/wellora",
+            "https://www.tiktok.com/@wellora"
+        ],
+        "logo": "https://raw.githubusercontent.com/ed-82/wellorawithlogo/main/Wellora%20background%20removed.png"
+    }
+    </script>
+    
+    <!-- Additional Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Wellora",
+        "url": "https://wellora.app/",
+        "logo": "https://raw.githubusercontent.com/ed-82/wellorawithlogo/main/Wellora%20background%20removed.png",
+        "sameAs": [
+            "https://www.instagram.com/wellora",
+            "https://www.facebook.com/wellora",
+            "https://www.tiktok.com/@wellora"
+        ]
+    }
+    </script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
@@ -35,7 +95,6 @@
             --radius: 12px;
             --transition: all 0.3s ease;
             
-            /* Brand Colors - Updated */
             --thorne-color: #1a73e8;
             --pure-color: #00a86b;
             --designs-color: #800080;
@@ -43,9 +102,9 @@
             --gaia-color: #2e8b57;
             --now-color: #800000;
             
-            /* Category Colors - UPDATED */
-            --dark-pink: #C2185B; /* Dark Pink for Gut Health */
-            --brown: #8B4513; /* Brown for Hormone Support */
+            /* Category Colors */
+            --dark-pink: #C2185B;
+            --brown: #8B4513;
             --tan: #D2B48C;
             --maroon: #800000;
             --yellow: #FFFF00;
@@ -58,8 +117,6 @@
             --navy: #000080;
             --fuchsia: #FF00FF;
             --purple: #800080;
-            
-            /* NEW: Colors for additional categories */
             --silver: #C0C0C0;
             --gray-dark: #808080;
         }
@@ -105,6 +162,7 @@
             display: flex;
             align-items: center;
             text-decoration: none;
+            gap: 12px;
         }
 
         .logo-img {
@@ -113,10 +171,11 @@
             object-fit: contain;
         }
 
-        /* Fallback styling if image doesn't load */
+        /* Keep fallback logo styling */
         .logo-fallback {
             display: flex;
             align-items: center;
+            gap: 12px;
         }
 
         .logo-icon {
@@ -127,7 +186,6 @@
             height: 50px;
             background: var(--gradient);
             border-radius: 50%;
-            margin-right: 12px;
             color: white;
             font-size: 24px;
             font-weight: 900;
@@ -384,7 +442,6 @@
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
 
-        /* Individual Brand Background Colors */
         .brand-thorne {
             background: linear-gradient(135deg, var(--thorne-color) 0%, #4d94ff 100%);
             color: white;
@@ -471,7 +528,7 @@
             transform: translateY(-2px);
         }
 
-        /* Categories Section - COLORFUL BACKGROUNDS - UPDATED */
+        /* Categories Section */
         .categories {
             padding: 80px 0;
             background: linear-gradient(135deg, #f8f9ff 0%, #eef1ff 100%);
@@ -517,9 +574,8 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
 
-        /* Individual Category Background Colors - UPDATED */
         .category-gut { 
-            background: linear-gradient(135deg, var(--dark-pink) 0%, #e91e63 100%); /* Dark Pink */
+            background: linear-gradient(135deg, var(--dark-pink) 0%, #e91e63 100%);
             color: white;
         }
         
@@ -579,23 +635,23 @@
         }
         
         .category-skin { 
-            background: linear-gradient(135deg, var(--tan) 0%, #e6d0b3 100%); /* Tan color */
+            background: linear-gradient(135deg, var(--tan) 0%, #e6d0b3 100%);
             color: #333;
         }
         
         .category-hormone { 
-            background: linear-gradient(135deg, var(--brown) 0%, #a0522d 100%); /* Brown color */
+            background: linear-gradient(135deg, var(--brown) 0%, #a0522d 100%);
             color: white;
         }
         
         /* NEW: Additional Categories */
         .category-supplements { 
-            background: linear-gradient(135deg, var(--silver) 0%, #e0e0e0 100%); /* Silver background */
+            background: linear-gradient(135deg, var(--silver) 0%, #e0e0e0 100%);
             color: #333;
         }
         
         .category-vitamins { 
-            background: linear-gradient(135deg, var(--gray-dark) 0%, #a0a0a0 100%); /* Gray background */
+            background: linear-gradient(135deg, var(--gray-dark) 0%, #a0a0a0 100%);
             color: white;
         }
 
@@ -614,7 +670,6 @@
             position: relative;
         }
 
-        /* For categories with dark text, make icon background darker */
         .category-men .category-icon,
         .category-immune .category-icon,
         .category-sleep .category-icon,
@@ -640,7 +695,6 @@
             position: relative;
         }
 
-        /* For categories with dark text */
         .category-men p,
         .category-immune p,
         .category-sleep p,
@@ -1006,11 +1060,12 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo">
-                    <!-- Logo from GitHub repository - with fallback -->
+                <a href="https://wellora.app" class="logo">
+                    <!-- Logo with enhanced alt text for SEO -->
                     <img src="https://raw.githubusercontent.com/ed-82/wellorawithlogo/main/Wellora%20background%20removed.png" 
-                         alt="Wellora Logo" 
+                         alt="Wellora Logo - Premium Wellness Supplements" 
                          class="logo-img"
+                         title="Wellora Supplements"
                          onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='flex';">
                     <div class="logo-fallback" style="display: none;">
                         <div class="logo-icon">W</div>
@@ -1053,7 +1108,7 @@
                         <!-- Thorne -->
                         <div class="brand-card brand-thorne" onclick="redirectToStore()">
                             <div class="brand-logo-container">
-                                <img src="https://www.thorne.com/images/logos/thorne-logo.png" alt="Thorne" class="brand-logo">
+                                <img src="https://www.thorne.com/images/logos/thorne-logo.png" alt="Thorne Supplements" class="brand-logo">
                             </div>
                             <div class="brand-name">Thorne</div>
                             <div class="brand-tagline">Research-Backed Supplements</div>
@@ -1063,7 +1118,7 @@
                         <!-- Pure Encapsulations -->
                         <div class="brand-card brand-pure" onclick="redirectToStore()">
                             <div class="brand-logo-container">
-                                <img src="https://www.pureencapsulations.com/media/logo/stores/1/pe_logo_2.png" alt="Pure Encapsulations" class="brand-logo">
+                                <img src="https://www.pureencapsulations.com/media/logo/stores/1/pe_logo_2.png" alt="Pure Encapsulations Supplements" class="brand-logo">
                             </div>
                             <div class="brand-name">Pure Encapsulations</div>
                             <div class="brand-tagline">Pure & Hypoallergenic</div>
@@ -1085,7 +1140,7 @@
                 <!-- Designs for Health -->
                 <div class="brand-card brand-designs" onclick="redirectToStore()">
                     <div class="brand-logo-container">
-                        <img src="https://www.designsforhealth.com/themes/custom/dfh/images/logo.svg" alt="Designs for Health" class="brand-logo">
+                        <img src="https://www.designsforhealth.com/themes/custom/dfh/images/logo.svg" alt="Designs for Health Supplements" class="brand-logo">
                     </div>
                     <div class="brand-name">Designs for Health</div>
                     <div class="brand-tagline">Practitioner-Grade Formulas</div>
@@ -1095,7 +1150,7 @@
                 <!-- Metagenics -->
                 <div class="brand-card brand-metagenics" onclick="redirectToStore()">
                     <div class="brand-logo-container">
-                        <img src="https://www.metagenics.com/wp-content/themes/metagenics/assets/images/logo.png" alt="Metagenics" class="brand-logo">
+                        <img src="https://www.metagenics.com/wp-content/themes/metagenics/assets/images/logo.png" alt="Metagenics Supplements" class="brand-logo">
                     </div>
                     <div class="brand-name">Metagenics</div>
                     <div class="brand-tagline">Medical Food Solutions</div>
@@ -1105,7 +1160,7 @@
                 <!-- Gaia Herbs -->
                 <div class="brand-card brand-gaia" onclick="redirectToStore()">
                     <div class="brand-logo-container">
-                        <img src="https://www.gaiaherbs.com/skin/frontend/gaia/default/images/logo.svg" alt="Gaia Herbs" class="brand-logo">
+                        <img src="https://www.gaiaherbs.com/skin/frontend/gaia/default/images/logo.svg" alt="Gaia Herbs Supplements" class="brand-logo">
                     </div>
                     <div class="brand-name">Gaia Herbs</div>
                     <div class="brand-tagline">Organic Plant-Based Formulas</div>
@@ -1115,7 +1170,7 @@
                 <!-- NOW Foods -->
                 <div class="brand-card brand-now" onclick="redirectToStore()">
                     <div class="brand-logo-container">
-                        <img src="https://www.nowfoods.com/sites/all/themes/nowfoods_theme/logo.png" alt="NOW Foods" class="brand-logo">
+                        <img src="https://www.nowfoods.com/sites/all/themes/nowfoods_theme/logo.png" alt="NOW Foods Supplements" class="brand-logo">
                     </div>
                     <div class="brand-name">NOW Foods</div>
                     <div class="brand-tagline">Quality & Value Since 1968</div>
@@ -1132,7 +1187,7 @@
             <p class="section-subtitle">Explore our curated collections based on your specific health goals and needs.</p>
             
             <div class="categories-grid" id="categoriesGrid">
-                <!-- Category cards will be generated by JavaScript with colorful backgrounds -->
+                <!-- Category cards will be generated by JavaScript -->
             </div>
         </div>
     </section>
@@ -1154,8 +1209,6 @@
             <div class="brands-by-letter" id="brandsB">
                 <!-- Brands starting with B will be loaded here -->
             </div>
-            
-            <!-- More letter sections will be generated by JavaScript -->
         </div>
     </section>
 
@@ -1206,7 +1259,6 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
-                    <!-- Footer logo from GitHub repository -->
                     <img src="https://raw.githubusercontent.com/ed-82/wellorawithlogo/main/Wellora%20background%20removed.png" 
                          alt="Wellora Logo" 
                          class="footer-logo"
@@ -1227,7 +1279,7 @@
                         <li><a href="#categories">Categories</a></li>
                         <li><a href="#brands">Brands</a></li>
                         <li><a href="#brand-directory">All Brands</a></li>
-                        <li><a href="#">Subscription</a></li>
+                        <li><a href="https://wellora.app">Home</a></li>
                     </ul>
                 </div>
                 
@@ -1253,7 +1305,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Wellora. All rights reserved. | This site is for demonstration purposes only. Brand logos are property of their respective owners.</p>
+                <p>&copy; 2024 Wellora. All rights reserved. | <a href="https://wellora.app" style="color: #aaa; text-decoration: underline;">wellora.app</a> | This site is for demonstration purposes only. Brand logos are property of their respective owners.</p>
             </div>
         </div>
     </footer>
@@ -1267,7 +1319,7 @@
             window.open(storeUrl, '_blank');
         }
         
-        // Category data with icons and color classes - UPDATED with new categories
+        // Category data with icons and color classes
         const categories = [
             { name: "Gut Health", desc: "Probiotics and digestive enzymes", icon: "fas fa-stomach", colorClass: "category-gut" },
             { name: "Women's Health", desc: "Hormone balance and vitality", icon: "fas fa-venus", colorClass: "category-women" },
@@ -1283,7 +1335,6 @@
             { name: "Bone & Joint", desc: "Mobility and skeletal health", icon: "fas fa-bone", colorClass: "category-bone" },
             { name: "Skin, Hair & Nails", desc: "Beauty from within", icon: "fas fa-spa", colorClass: "category-skin" },
             { name: "Hormone Support", desc: "Endocrine system balance", icon: "fas fa-balance-scale", colorClass: "category-hormone" },
-            // NEW CATEGORIES ADDED HERE
             { name: "Supplements", desc: "All-purpose wellness supplements", icon: "fas fa-capsules", colorClass: "category-supplements" },
             { name: "Vitamins & Minerals", desc: "Essential nutrients for health", icon: "fas fa-pills", colorClass: "category-vitamins" }
         ];
@@ -1432,7 +1483,7 @@
             ]
         };
 
-        // Function to create category cards with colorful backgrounds
+        // Function to create category cards
         function createCategoryCards() {
             const grid = document.getElementById('categoriesGrid');
             
@@ -1447,9 +1498,7 @@
                     <p>${category.desc}</p>
                 `;
                 
-                // Add click event to redirect to Fullscript store
                 card.addEventListener('click', redirectToStore);
-                
                 grid.appendChild(card);
             });
         }
@@ -1468,7 +1517,6 @@
                     e.preventDefault();
                     showBrandsByLetter(letter);
                     
-                    // Update active class
                     document.querySelectorAll('.letter-link').forEach(link => {
                         link.classList.remove('active');
                     });
@@ -1478,7 +1526,6 @@
                 alphabetNav.appendChild(link);
             });
             
-            // Activate first letter by default
             if (letters.length > 0) {
                 document.querySelector('.letter-link').classList.add('active');
                 showBrandsByLetter(letters[0]);
@@ -1487,16 +1534,13 @@
 
         // Function to show brands by letter
         function showBrandsByLetter(letter) {
-            // Hide all brand sections
             document.querySelectorAll('.brands-by-letter').forEach(section => {
                 section.classList.remove('active');
             });
             
-            // Show selected brand section
             const sectionId = `brands${letter}`;
             let section = document.getElementById(sectionId);
             
-            // If section doesn't exist, create it
             if (!section) {
                 section = document.createElement('div');
                 section.id = sectionId;
@@ -1504,7 +1548,6 @@
                 document.querySelector('#brand-directory .container').appendChild(section);
             }
             
-            // Clear and populate the section
             section.innerHTML = '';
             
             if (allBrands[letter] && allBrands[letter].length > 0) {
@@ -1522,101 +1565,13 @@
             section.classList.add('active');
         }
 
-        // Function to handle image errors (fallback to brand name)
-        function handleImageError(img) {
-            const brandCard = img.closest('.brand-card');
-            const brandName = brandCard.querySelector('.brand-name').textContent;
-            
-            // Replace broken image with brand initial
-            const logoContainer = img.parentElement;
-            logoContainer.innerHTML = `<div style="font-size: 28px; font-weight: 700;">${brandName.charAt(0)}</div>`;
-        }
-
         // Initialize when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            // Create category cards with colorful backgrounds
             createCategoryCards();
-            
-            // Create alphabet navigation and brand directory
             createAlphabetNav();
             
-            // Set up image error handling
-            document.querySelectorAll('.brand-logo').forEach(img => {
-                img.addEventListener('error', function() {
-                    handleImageError(this);
-                });
-            });
-            
-            // Add animation to elements on scroll
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-            
-            // Observe all interactive cards
-            document.querySelectorAll('.category-card, .brand-card, .benefit-card, .brand-item').forEach(element => {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(20px)';
-                element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                observer.observe(element);
-            });
-            
-            // Add cart functionality
-            const cartIcon = document.querySelector('.cart-icon');
-            const cartCount = document.querySelector('.cart-count');
-            
-            cartIcon.addEventListener('click', redirectToStore);
-            
-            // Newsletter form submission
-            const newsletterForm = document.querySelector('.newsletter-form');
-            const newsletterInput = newsletterForm.querySelector('input');
-            const newsletterButton = newsletterForm.querySelector('button');
-            
-            newsletterButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                if (newsletterInput.value && newsletterInput.value.includes('@')) {
-                    newsletterInput.value = '';
-                    alert('Thanks for subscribing! Check your email for a welcome discount.');
-                } else {
-                    alert('Please enter a valid email address.');
-                }
-            });
-            
-            // CTA button animation
-            const ctaButton = document.querySelector('.cta-button');
-            ctaButton.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-3px) scale(1.05)';
-            });
-            ctaButton.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-            
-            // Brand button animations
-            document.querySelectorAll('.brand-button').forEach(button => {
-                button.addEventListener('click', function(e) {
-                    e.stopPropagation(); // Prevent triggering the card click
-                    const brandName = this.closest('.brand-card').querySelector('.brand-name').textContent;
-                    alert(`Shopping for ${brandName} products...`);
-                    redirectToStore();
-                });
-            });
-            
-            // Add click event to Shop link in header
-            document.querySelector('a[href="#"]').addEventListener('click', function(e) {
-                if (this.textContent === 'Shop') {
-                    e.preventDefault();
-                    redirectToStore();
-                }
-            });
+            // Add current year to copyright
+            document.querySelector('.copyright p').innerHTML = document.querySelector('.copyright p').innerHTML.replace('2024', new Date().getFullYear());
         });
     </script>
 </body>
