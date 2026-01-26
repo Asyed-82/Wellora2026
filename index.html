@@ -6,6 +6,18 @@
     <title>Wellora Supplements - Premium Vitamins & Wellness Products Online</title>
     <meta name="description" content="Shop Wellora's premium vitamins and supplements online. Doctor-formulated, third-party tested wellness products with free shipping available.">
     
+    <!-- SEO Meta Tags for Better Google Search Results -->
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Wellora, supplements, vitamins, wellness, health, Thorne, Pure Encapsulations, Designs for Health, Metagenics, Gaia Herbs, NOW Foods">
+    <meta property="og:title" content="Wellora Supplements - Premium Vitamins & Wellness Products">
+    <meta property="og:description" content="Shop premium vitamins and supplements from trusted brands. Doctor-formulated, third-party tested wellness products.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://raw.githubusercontent.com/ed-82/wellorawithlogo/main/Wellora%20background%20removed.png">
+    <meta property="og:url" content="https://ed-82.github.io/wellorawithlogo/">
+    
+    <!-- Favicon for Browser Tab -->
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/ed-82/wellorawithlogo/main/Wellora%20background%20removed.png">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
     
@@ -46,6 +58,10 @@
             --navy: #000080;
             --fuchsia: #FF00FF;
             --purple: #800080;
+            
+            /* NEW: Colors for additional categories */
+            --silver: #C0C0C0;
+            --gray-dark: #808080;
         }
 
         * {
@@ -89,6 +105,18 @@
             display: flex;
             align-items: center;
             text-decoration: none;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* Fallback styling if image doesn't load */
+        .logo-fallback {
+            display: flex;
+            align-items: center;
         }
 
         .logo-icon {
@@ -559,6 +587,17 @@
             background: linear-gradient(135deg, var(--brown) 0%, #a0522d 100%); /* Brown color */
             color: white;
         }
+        
+        /* NEW: Additional Categories */
+        .category-supplements { 
+            background: linear-gradient(135deg, var(--silver) 0%, #e0e0e0 100%); /* Silver background */
+            color: #333;
+        }
+        
+        .category-vitamins { 
+            background: linear-gradient(135deg, var(--gray-dark) 0%, #a0a0a0 100%); /* Gray background */
+            color: white;
+        }
 
         .category-icon {
             width: 70px;
@@ -580,7 +619,8 @@
         .category-immune .category-icon,
         .category-sleep .category-icon,
         .category-probiotics .category-icon,
-        .category-skin .category-icon {
+        .category-skin .category-icon,
+        .category-supplements .category-icon {
             background: rgba(0, 0, 0, 0.15);
             color: #333;
         }
@@ -605,7 +645,8 @@
         .category-immune p,
         .category-sleep p,
         .category-probiotics p,
-        .category-skin p {
+        .category-skin p,
+        .category-supplements p {
             color: #333;
         }
 
@@ -759,14 +800,10 @@
         }
 
         .footer-logo {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 32px;
-            font-weight: 900;
+            height: 50px;
+            width: auto;
+            object-fit: contain;
             margin-bottom: 20px;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
         }
 
         .footer-about p {
@@ -970,8 +1007,15 @@
         <div class="container">
             <div class="header-content">
                 <a href="#" class="logo">
-                    <div class="logo-icon">W</div>
-                    <div class="logo-text">WELLORA</div>
+                    <!-- Logo from GitHub repository - with fallback -->
+                    <img src="https://raw.githubusercontent.com/ed-82/wellorawithlogo/main/Wellora%20background%20removed.png" 
+                         alt="Wellora Logo" 
+                         class="logo-img"
+                         onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='flex';">
+                    <div class="logo-fallback" style="display: none;">
+                        <div class="logo-icon">W</div>
+                        <div class="logo-text">WELLORA</div>
+                    </div>
                 </a>
                 
                 <div class="nav-links">
@@ -1162,7 +1206,11 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
-                    <div class="footer-logo">WELLORA</div>
+                    <!-- Footer logo from GitHub repository -->
+                    <img src="https://raw.githubusercontent.com/ed-82/wellorawithlogo/main/Wellora%20background%20removed.png" 
+                         alt="Wellora Logo" 
+                         class="footer-logo"
+                         onerror="this.style.display='none';">
                     <p>Premium wellness supplements for modern living. Our products are scientifically formulated to support your health goals.</p>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -1219,7 +1267,7 @@
             window.open(storeUrl, '_blank');
         }
         
-        // Category data with icons and color classes - UPDATED
+        // Category data with icons and color classes - UPDATED with new categories
         const categories = [
             { name: "Gut Health", desc: "Probiotics and digestive enzymes", icon: "fas fa-stomach", colorClass: "category-gut" },
             { name: "Women's Health", desc: "Hormone balance and vitality", icon: "fas fa-venus", colorClass: "category-women" },
@@ -1234,7 +1282,10 @@
             { name: "Thyroid & Mood", desc: "Energy and emotional balance", icon: "fas fa-cloud-sun", colorClass: "category-thyroid" },
             { name: "Bone & Joint", desc: "Mobility and skeletal health", icon: "fas fa-bone", colorClass: "category-bone" },
             { name: "Skin, Hair & Nails", desc: "Beauty from within", icon: "fas fa-spa", colorClass: "category-skin" },
-            { name: "Hormone Support", desc: "Endocrine system balance", icon: "fas fa-balance-scale", colorClass: "category-hormone" }
+            { name: "Hormone Support", desc: "Endocrine system balance", icon: "fas fa-balance-scale", colorClass: "category-hormone" },
+            // NEW CATEGORIES ADDED HERE
+            { name: "Supplements", desc: "All-purpose wellness supplements", icon: "fas fa-capsules", colorClass: "category-supplements" },
+            { name: "Vitamins & Minerals", desc: "Essential nutrients for health", icon: "fas fa-pills", colorClass: "category-vitamins" }
         ];
 
         // All brands data organized by letter
