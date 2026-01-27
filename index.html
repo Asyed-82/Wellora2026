@@ -496,14 +496,17 @@
             height: 80px;
         }
 
-        .brand-logo {
+        /* UPDATED: Product image styling */
+        .brand-logo-container img.brand-logo {
             max-width: 100%;
             max-height: 50px;
-            filter: brightness(0) invert(1);
+            width: auto;
+            height: auto;
+            object-fit: contain;
             transition: var(--transition);
         }
 
-        .brand-card:hover .brand-logo {
+        .brand-card:hover .brand-logo-container img.brand-logo {
             transform: scale(1.1);
         }
 
@@ -1166,6 +1169,11 @@
                 width: 95%;
                 max-height: 85vh;
             }
+            
+            /* Adjust product images for mobile */
+            .brand-logo-container img.brand-logo {
+                max-height: 40px;
+            }
         }
 
         @media (max-width: 576px) {
@@ -1238,6 +1246,11 @@
                 width: 35px;
                 height: 35px;
                 font-size: 24px;
+            }
+            
+            /* Adjust product images for small mobile */
+            .brand-logo-container img.brand-logo {
+                max-height: 35px;
             }
         }
         
@@ -1364,7 +1377,10 @@
                         <!-- Thorne -->
                         <div class="brand-card brand-thorne" onclick="redirectToStore()">
                             <div class="brand-logo-container">
-                                <div class="brand-name">T</div>
+                                <!-- Thorne product image -->
+                                <img src="https://raw.githubusercontent.com/Asyed-82/Wellora2026/main/logo/ThorneCreatine.png" 
+                                     alt="Thorne Creatine Supplement" 
+                                     class="brand-logo">
                             </div>
                             <div class="brand-name">Thorne</div>
                             <div class="brand-tagline">Research-Backed Supplements</div>
@@ -1374,7 +1390,10 @@
                         <!-- Pure Encapsulations -->
                         <div class="brand-card brand-pure" onclick="redirectToStore()">
                             <div class="brand-logo-container">
-                                <div class="brand-name">P</div>
+                                <!-- Pure Encapsulations product image -->
+                                <img src="https://raw.githubusercontent.com/Asyed-82/Wellora2026/main/logo/Pure.png" 
+                                     alt="Pure Encapsulations Supplement" 
+                                     class="brand-logo">
                             </div>
                             <div class="brand-name">Pure Encapsulations</div>
                             <div class="brand-tagline">Pure & Hypoallergenic</div>
