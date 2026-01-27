@@ -542,7 +542,7 @@
             transform: translateY(-2px);
         }
 
-        /* Categories Section */
+        /* Categories Section - UPDATED WITH IMAGES */
         .categories {
             padding: 80px 0;
             background: linear-gradient(135deg, #f8f9ff 0%, #eef1ff 100%);
@@ -557,7 +557,7 @@
 
         .category-card {
             border-radius: var(--radius);
-            padding: 30px 25px;
+            padding: 25px 20px;
             text-align: center;
             box-shadow: var(--shadow);
             transition: var(--transition);
@@ -566,10 +566,10 @@
             position: relative;
             overflow: hidden;
             color: white;
-            min-height: 200px;
+            min-height: 280px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
         }
 
@@ -588,6 +588,7 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
 
+        /* Category background colors */
         .category-gut { 
             background: linear-gradient(135deg, var(--dark-pink) 0%, #e91e63 100%);
             color: white;
@@ -668,44 +669,48 @@
             color: white;
         }
 
-        .category-icon {
-            width: 70px;
-            height: 70px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
+        /* Category image container */
+        .category-image-container {
+            width: 180px;
+            height: 140px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
-            color: white;
-            font-size: 28px;
-            z-index: 2;
-            position: relative;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
         }
 
-        .category-men .category-icon,
-        .category-immune .category-icon,
-        .category-sleep .category-icon,
-        .category-probiotics .category-icon,
-        .category-skin .category-icon,
-        .category-supplements .category-icon {
-            background: rgba(0, 0, 0, 0.15);
-            color: #333;
+        .category-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .category-card:hover .category-image {
+            transform: scale(1.05);
         }
 
         .category-card h3 {
             font-size: 20px;
-            margin-bottom: 10px;
+            margin-bottom: 8px; /* Reduced spacing */
             color: inherit;
             z-index: 2;
             position: relative;
+            font-weight: 600;
         }
 
         .category-card p {
-            font-size: 14px;
-            opacity: 0.9;
+            font-size: 13px;
+            opacity: 0.95;
             z-index: 2;
             position: relative;
+            line-height: 1.4; /* Reduced line height */
+            margin-top: 0; /* Remove top margin */
         }
 
         .category-men p,
@@ -1177,6 +1182,12 @@
             .brand-logo-container img.brand-logo {
                 max-height: 85px;
             }
+            
+            /* Adjust category images for mobile */
+            .category-image-container {
+                width: 150px;
+                height: 120px;
+            }
         }
 
         @media (max-width: 576px) {
@@ -1202,8 +1213,8 @@
             }
             
             .brand-card, .category-card {
-                padding: 30px 20px;
-                min-height: 200px;
+                padding: 25px 20px;
+                min-height: 240px;
             }
             
             .alphabet-nav {
@@ -1260,6 +1271,12 @@
             .brand-logo-container img.brand-logo {
                 max-height: 75px;
             }
+            
+            /* Adjust category images for small mobile */
+            .category-image-container {
+                width: 130px;
+                height: 110px;
+            }
         }
         
         @media (max-width: 400px) {
@@ -1282,6 +1299,12 @@
             
             .brand-logo-container img.brand-logo {
                 max-height: 65px;
+            }
+            
+            /* Adjust category images for extra small mobile */
+            .category-image-container {
+                width: 110px;
+                height: 95px;
             }
         }
     </style>
@@ -1651,24 +1674,104 @@
             }
         });
         
-        // Category data with icons and color classes
+        // Updated Category data with images
         const categories = [
-            { name: "Gut Health", desc: "Probiotics and digestive enzymes", icon: "fas fa-stomach", colorClass: "category-gut" },
-            { name: "Women's Health", desc: "Hormone balance and vitality", icon: "fas fa-venus", colorClass: "category-women" },
-            { name: "Men's Health", desc: "Performance and longevity", icon: "fas fa-mars", colorClass: "category-men" },
-            { name: "Immune Support", desc: "Boost your natural defenses", icon: "fas fa-shield-virus", colorClass: "category-immune" },
-            { name: "Sleep & Relaxation", desc: "Restful sleep and calm", icon: "fas fa-moon", colorClass: "category-sleep" },
-            { name: "Stress Management", desc: "Adaptogens and calming herbs", icon: "fas fa-brain", colorClass: "category-stress" },
-            { name: "Probiotics", desc: "Gut flora and microbiome", icon: "fas fa-bacteria", colorClass: "category-probiotics" },
-            { name: "Methylation Support", desc: "Genetic and metabolic health", icon: "fas fa-dna", colorClass: "category-methylation" },
-            { name: "Protein & Fitness", desc: "Muscle recovery and energy", icon: "fas fa-dumbbell", colorClass: "category-protein" },
-            { name: "Cognition & Focus", desc: "Mental clarity and concentration", icon: "fas fa-lightbulb", colorClass: "category-cognition" },
-            { name: "Thyroid & Mood", desc: "Energy and emotional balance", icon: "fas fa-cloud-sun", colorClass: "category-thyroid" },
-            { name: "Bone & Joint", desc: "Mobility and skeletal health", icon: "fas fa-bone", colorClass: "category-bone" },
-            { name: "Skin, Hair & Nails", desc: "Beauty from within", icon: "fas fa-spa", colorClass: "category-skin" },
-            { name: "Hormone Support", desc: "Endocrine system balance", icon: "fas fa-balance-scale", colorClass: "category-hormone" },
-            { name: "Supplements", desc: "All-purpose wellness supplements", icon: "fas fa-capsules", colorClass: "category-supplements" },
-            { name: "Vitamins & Minerals", desc: "Essential nutrients for health", icon: "fas fa-pills", colorClass: "category-vitamins" }
+            { 
+                name: "Gut Health", 
+                desc: "Probiotics and digestive enzymes", 
+                image: "GutHealth.jpeg",
+                colorClass: "category-gut" 
+            },
+            { 
+                name: "Women's Health", 
+                desc: "Hormone balance and vitality", 
+                image: "WomensHealth.jpeg",
+                colorClass: "category-women" 
+            },
+            { 
+                name: "Men's Health", 
+                desc: "Performance and longevity", 
+                image: "Men's Health.jpeg",
+                colorClass: "category-men" 
+            },
+            { 
+                name: "Immune Support", 
+                desc: "Boost your natural defenses", 
+                image: "ImmuneSupport.jpeg",
+                colorClass: "category-immune" 
+            },
+            { 
+                name: "Sleep & Relaxation", 
+                desc: "Restful sleep and calm", 
+                image: "Sleep&Relaxation.jpeg",
+                colorClass: "category-sleep" 
+            },
+            { 
+                name: "Stress Management", 
+                desc: "Adaptogens and calming herbs", 
+                image: "StressManagement.jpeg",
+                colorClass: "category-stress" 
+            },
+            { 
+                name: "Probiotics", 
+                desc: "Gut flora and microbiome", 
+                image: "Probiotics.jpeg",
+                colorClass: "category-probiotics" 
+            },
+            { 
+                name: "Methylation Support", 
+                desc: "Genetic and metabolic health", 
+                image: "MethylationSupport.jpeg",
+                colorClass: "category-methylation" 
+            },
+            { 
+                name: "Protein & Fitness", 
+                desc: "Muscle recovery and energy", 
+                image: "Protein&Fitness.jpeg",
+                colorClass: "category-protein" 
+            },
+            { 
+                name: "Cognition & Focus", 
+                desc: "Mental clarity and concentration", 
+                image: "Cognition&Focus.jpeg",
+                colorClass: "category-cognition" 
+            },
+            { 
+                name: "Thyroid & Mood", 
+                desc: "Energy and emotional balance", 
+                image: "Thyroid&Mood.jpeg",
+                colorClass: "category-thyroid" 
+            },
+            { 
+                name: "Bone & Joint", 
+                desc: "Mobility and skeletal health", 
+                image: "Bone&Joint.jpeg",
+                colorClass: "category-bone" 
+            },
+            { 
+                name: "Skin, Hair & Nails", 
+                desc: "Beauty from within", 
+                image: "SkinHairNails.jpeg",
+                colorClass: "category-skin" 
+            },
+            { 
+                name: "Hormone Support", 
+                desc: "Endocrine system balance", 
+                image: "HormoneSupport.jpeg",
+                colorClass: "category-hormone" 
+            },
+            { 
+                name: "Supplements", 
+                desc: "All-purpose wellness supplements", 
+                image: "Supplements.jpeg",
+                colorClass: "category-supplements" 
+            },
+            { 
+                name: "Vitamins & Minerals", 
+                desc: "Essential nutrients for health", 
+                image: "Vitamins&Minerals.jpeg",
+                colorClass: "category-vitamins" 
+            }
         ];
 
         // All brands data organized by letter
@@ -1815,7 +1918,7 @@
             ]
         };
 
-        // Function to create category cards
+        // Function to create category cards with images
         function createCategoryCards() {
             const grid = document.getElementById('categoriesGrid');
             
@@ -1823,8 +1926,10 @@
                 const card = document.createElement('div');
                 card.className = `category-card ${category.colorClass}`;
                 card.innerHTML = `
-                    <div class="category-icon">
-                        <i class="${category.icon}"></i>
+                    <div class="category-image-container">
+                        <img src="https://raw.githubusercontent.com/Asyed-82/Wellora2026/main/logo/${category.image}" 
+                             alt="${category.name}" 
+                             class="category-image">
                     </div>
                     <h3>${category.name}</h3>
                     <p>${category.desc}</p>
