@@ -542,7 +542,7 @@
             transform: translateY(-2px);
         }
 
-        /* Categories Section - UPDATED WITH IMAGES */
+        /* Categories Section - UPDATED WITH FULL-SIZE IMAGES */
         .categories {
             padding: 80px 0;
             background: linear-gradient(135deg, #f8f9ff 0%, #eef1ff 100%);
@@ -557,30 +557,17 @@
 
         .category-card {
             border-radius: var(--radius);
-            padding: 25px 20px;
+            overflow: hidden;
             text-align: center;
             box-shadow: var(--shadow);
             transition: var(--transition);
             cursor: pointer;
             border: 2px solid transparent;
             position: relative;
-            overflow: hidden;
-            color: white;
-            min-height: 280px;
+            background: white;
+            min-height: 320px;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-        }
-
-        .category-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: rgba(255, 255, 255, 0.5);
         }
 
         .category-card:hover {
@@ -588,106 +575,25 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
 
-        /* Category background colors */
-        .category-gut { 
-            background: linear-gradient(135deg, var(--dark-pink) 0%, #e91e63 100%);
-            color: white;
-        }
-        
-        .category-women { 
-            background: linear-gradient(135deg, var(--maroon) 0%, #b30000 100%); 
-            color: white;
-        }
-        
-        .category-men { 
-            background: linear-gradient(135deg, var(--yellow) 0%, #ffff4d 100%); 
-            color: #333; 
-        }
-        
-        .category-immune { 
-            background: linear-gradient(135deg, var(--olive) 0%, #b3b300 100%); 
-            color: #333; 
-        }
-        
-        .category-sleep { 
-            background: linear-gradient(135deg, var(--lime) 0%, #4dff4d 100%); 
-            color: #333; 
-        }
-        
-        .category-stress { 
-            background: linear-gradient(135deg, var(--green) 0%, #00b300 100%); 
-            color: white;
-        }
-        
-        .category-probiotics { 
-            background: linear-gradient(135deg, var(--aqua) 0%, #4dffff 100%); 
-            color: #333; 
-        }
-        
-        .category-methylation { 
-            background: linear-gradient(135deg, var(--teal) 0%, #00b3b3 100%); 
-            color: white;
-        }
-        
-        .category-protein { 
-            background: linear-gradient(135deg, var(--blue) 0%, #4d4dff 100%); 
-            color: white;
-        }
-        
-        .category-cognition { 
-            background: linear-gradient(135deg, var(--navy) 0%, #0000b3 100%); 
-            color: white;
-        }
-        
-        .category-thyroid { 
-            background: linear-gradient(135deg, var(--fuchsia) 0%, #ff4dff 100%); 
-            color: white;
-        }
-        
-        .category-bone { 
-            background: linear-gradient(135deg, var(--purple) 0%, #b347b3 100%); 
-            color: white;
-        }
-        
-        .category-skin { 
-            background: linear-gradient(135deg, var(--tan) 0%, #e6d0b3 100%);
-            color: #333;
-        }
-        
-        .category-hormone { 
-            background: linear-gradient(135deg, var(--brown) 0%, #a0522d 100%);
-            color: white;
-        }
-        
-        .category-supplements { 
-            background: linear-gradient(135deg, var(--silver) 0%, #e0e0e0 100%);
-            color: #333;
-        }
-        
-        .category-vitamins { 
-            background: linear-gradient(135deg, var(--gray-dark) 0%, #a0a0a0 100%);
-            color: white;
-        }
-
-        /* Category image container */
+        /* Category image container - FULL SIZE */
         .category-image-container {
-            width: 180px;
-            height: 140px;
-            margin-bottom: 15px;
-            border-radius: 10px;
+            width: 100%;
+            height: 180px;
+            margin: 0;
+            border-radius: 0;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 10px;
+            padding: 0;
+            flex: 0 0 auto;
         }
 
         .category-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 0;
             transition: var(--transition);
         }
 
@@ -695,31 +601,206 @@
             transform: scale(1.05);
         }
 
+        /* Category text content */
+        .category-content {
+            padding: 20px 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
         .category-card h3 {
             font-size: 20px;
-            margin-bottom: 8px; /* Reduced spacing */
-            color: inherit;
-            z-index: 2;
-            position: relative;
+            margin-bottom: 8px;
+            color: var(--dark);
             font-weight: 600;
         }
 
         .category-card p {
             font-size: 13px;
-            opacity: 0.95;
-            z-index: 2;
-            position: relative;
-            line-height: 1.4; /* Reduced line height */
-            margin-top: 0; /* Remove top margin */
+            color: var(--gray);
+            line-height: 1.4;
+            margin-top: 0;
+            /* 1.2 line spacing between title and description */
+            margin-bottom: 0;
         }
 
-        .category-men p,
-        .category-immune p,
-        .category-sleep p,
-        .category-probiotics p,
-        .category-skin p,
+        /* Category background colors for text area only */
+        .category-gut { 
+            background: var(--dark-pink);
+        }
+        .category-gut .category-content {
+            background: linear-gradient(135deg, var(--dark-pink) 0%, #e91e63 100%);
+            color: white;
+        }
+        .category-gut p {
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .category-women { 
+            background: var(--maroon);
+        }
+        .category-women .category-content {
+            background: linear-gradient(135deg, var(--maroon) 0%, #b30000 100%);
+            color: white;
+        }
+        .category-women p {
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .category-men { 
+            background: var(--yellow);
+        }
+        .category-men .category-content {
+            background: linear-gradient(135deg, var(--yellow) 0%, #ffff4d 100%);
+            color: #333;
+        }
+        .category-men p {
+            color: #333;
+        }
+        
+        .category-immune { 
+            background: var(--olive);
+        }
+        .category-immune .category-content {
+            background: linear-gradient(135deg, var(--olive) 0%, #b3b300 100%);
+            color: #333;
+        }
+        .category-immune p {
+            color: #333;
+        }
+        
+        .category-sleep { 
+            background: var(--lime);
+        }
+        .category-sleep .category-content {
+            background: linear-gradient(135deg, var(--lime) 0%, #4dff4d 100%);
+            color: #333;
+        }
+        .category-sleep p {
+            color: #333;
+        }
+        
+        .category-stress { 
+            background: var(--green);
+        }
+        .category-stress .category-content {
+            background: linear-gradient(135deg, var(--green) 0%, #00b300 100%);
+            color: white;
+        }
+        .category-stress p {
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .category-probiotics { 
+            background: var(--aqua);
+        }
+        .category-probiotics .category-content {
+            background: linear-gradient(135deg, var(--aqua) 0%, #4dffff 100%);
+            color: #333;
+        }
+        .category-probiotics p {
+            color: #333;
+        }
+        
+        .category-methylation { 
+            background: var(--teal);
+        }
+        .category-methylation .category-content {
+            background: linear-gradient(135deg, var(--teal) 0%, #00b3b3 100%);
+            color: white;
+        }
+        .category-methylation p {
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .category-protein { 
+            background: var(--blue);
+        }
+        .category-protein .category-content {
+            background: linear-gradient(135deg, var(--blue) 0%, #4d4dff 100%);
+            color: white;
+        }
+        .category-protein p {
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .category-cognition { 
+            background: var(--navy);
+        }
+        .category-cognition .category-content {
+            background: linear-gradient(135deg, var(--navy) 0%, #0000b3 100%);
+            color: white;
+        }
+        .category-cognition p {
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .category-thyroid { 
+            background: var(--fuchsia);
+        }
+        .category-thyroid .category-content {
+            background: linear-gradient(135deg, var(--fuchsia) 0%, #ff4dff 100%);
+            color: white;
+        }
+        .category-thyroid p {
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .category-bone { 
+            background: var(--purple);
+        }
+        .category-bone .category-content {
+            background: linear-gradient(135deg, var(--purple) 0%, #b347b3 100%);
+            color: white;
+        }
+        .category-bone p {
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .category-skin { 
+            background: var(--tan);
+        }
+        .category-skin .category-content {
+            background: linear-gradient(135deg, var(--tan) 0%, #e6d0b3 100%);
+            color: #333;
+        }
+        .category-skin p {
+            color: #333;
+        }
+        
+        .category-hormone { 
+            background: var(--brown);
+        }
+        .category-hormone .category-content {
+            background: linear-gradient(135deg, var(--brown) 0%, #a0522d 100%);
+            color: white;
+        }
+        .category-hormone p {
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .category-supplements { 
+            background: var(--silver);
+        }
+        .category-supplements .category-content {
+            background: linear-gradient(135deg, var(--silver) 0%, #e0e0e0 100%);
+            color: #333;
+        }
         .category-supplements p {
             color: #333;
+        }
+        
+        .category-vitamins { 
+            background: var(--gray-dark);
+        }
+        .category-vitamins .category-content {
+            background: linear-gradient(135deg, var(--gray-dark) 0%, #a0a0a0 100%);
+            color: white;
+        }
+        .category-vitamins p {
+            color: rgba(255, 255, 255, 0.95);
         }
 
         /* Brand Directory Section */
@@ -1185,8 +1266,11 @@
             
             /* Adjust category images for mobile */
             .category-image-container {
-                width: 150px;
-                height: 120px;
+                height: 150px;
+            }
+            
+            .category-card {
+                min-height: 280px;
             }
         }
 
@@ -1274,8 +1358,11 @@
             
             /* Adjust category images for small mobile */
             .category-image-container {
-                width: 130px;
-                height: 110px;
+                height: 130px;
+            }
+            
+            .category-card {
+                min-height: 260px;
             }
         }
         
@@ -1303,8 +1390,11 @@
             
             /* Adjust category images for extra small mobile */
             .category-image-container {
-                width: 110px;
-                height: 95px;
+                height: 110px;
+            }
+            
+            .category-card {
+                min-height: 240px;
             }
         }
     </style>
@@ -1674,7 +1764,7 @@
             }
         });
         
-        // Updated Category data with images
+        // Updated Category data with images - UPDATED FOR FULL IMAGE CARDS
         const categories = [
             { 
                 name: "Gut Health", 
@@ -1918,7 +2008,7 @@
             ]
         };
 
-        // Function to create category cards with images
+        // Function to create category cards with full-size images
         function createCategoryCards() {
             const grid = document.getElementById('categoriesGrid');
             
@@ -1931,8 +2021,10 @@
                              alt="${category.name}" 
                              class="category-image">
                     </div>
-                    <h3>${category.name}</h3>
-                    <p>${category.desc}</p>
+                    <div class="category-content">
+                        <h3>${category.name}</h3>
+                        <p>${category.desc}</p>
+                    </div>
                 `;
                 
                 card.addEventListener('click', function() {
