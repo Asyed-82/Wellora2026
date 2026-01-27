@@ -182,9 +182,9 @@
             object-fit: contain;
         }
 
-        /* Keep fallback logo styling */
+        /* UPDATED: Hide fallback logo by default, only show if image fails */
         .logo-fallback {
-            display: flex;
+            display: none;
             align-items: center;
             gap: 12px;
         }
@@ -1322,13 +1322,13 @@
         <div class="container">
             <div class="header-content">
                 <a href="https://wellora.app" class="logo">
-                    <!-- Logo with enhanced alt text for SEO -->
+                    <!-- UPDATED: Shows real Wellora logo from GitHub -->
                     <img src="https://raw.githubusercontent.com/ed-82/wellorawithlogo/main/Wellora%20background%20removed.png" 
                          alt="Wellora Logo - Premium Wellness Supplements" 
                          class="logo-img"
                          title="Wellora Supplements"
-                         onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='flex';">
-                    <div class="logo-fallback" style="display: none;">
+                         onerror="this.onerror=null; this.style.display='none'; document.querySelector('.logo-fallback').style.display='flex';">
+                    <div class="logo-fallback">
                         <div class="logo-icon">W</div>
                         <div class="logo-text">WELLORA</div>
                     </div>
@@ -1524,6 +1524,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
+                    <!-- UPDATED: Shows real Wellora logo in footer -->
                     <img src="https://raw.githubusercontent.com/ed-82/wellorawithlogo/main/Wellora%20background%20removed.png" 
                          alt="Wellora Logo" 
                          class="footer-logo"
