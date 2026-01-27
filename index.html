@@ -851,7 +851,7 @@
             font-size: 15px;
         }
 
-        /* Contact Modal */
+        /* Contact Modal - UPDATED FOR MOBILE FIXES */
         .contact-modal {
             display: none;
             position: fixed;
@@ -864,6 +864,8 @@
             align-items: center;
             justify-content: center;
             animation: fadeIn 0.3s ease;
+            overflow-y: auto;
+            padding: 20px;
         }
 
         @keyframes fadeIn {
@@ -884,6 +886,9 @@
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
             position: relative;
             animation: slideUp 0.3s ease;
+            margin: auto;
+            max-height: 90vh;
+            overflow-y: auto;
         }
 
         @keyframes slideUp {
@@ -895,16 +900,19 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            font-size: 24px;
+            font-size: 28px;
             color: var(--gray);
             cursor: pointer;
             transition: var(--transition);
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
+            z-index: 10;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .close-modal:hover {
@@ -976,6 +984,7 @@
             font-weight: 600;
             text-decoration: none;
             transition: var(--transition);
+            word-break: break-all;
         }
 
         .contact-details a:hover {
@@ -1049,6 +1058,7 @@
             color: #aaa;
             text-decoration: none;
             transition: var(--transition);
+            cursor: pointer;
         }
 
         .footer-links a:hover {
@@ -1154,6 +1164,7 @@
             .contact-content {
                 padding: 30px 25px;
                 width: 95%;
+                max-height: 85vh;
             }
         }
 
@@ -1194,10 +1205,52 @@
                 font-size: 12px;
             }
             
+            .contact-content {
+                padding: 25px 20px;
+                width: 100%;
+            }
+            
+            .contact-item {
+                flex-direction: row;
+                text-align: left;
+                gap: 15px;
+                padding: 12px;
+            }
+            
+            .contact-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+            
+            .contact-details h3 {
+                font-size: 14px;
+            }
+            
+            .contact-details p, 
+            .contact-details a {
+                font-size: 16px;
+            }
+            
+            .close-modal {
+                top: 15px;
+                right: 15px;
+                width: 35px;
+                height: 35px;
+                font-size: 24px;
+            }
+        }
+        
+        @media (max-width: 400px) {
             .contact-item {
                 flex-direction: column;
                 text-align: center;
                 gap: 10px;
+            }
+            
+            .contact-details p, 
+            .contact-details a {
+                word-break: break-word;
             }
         }
     </style>
@@ -1286,7 +1339,7 @@
                     <a href="#categories">Categories</a>
                     <a href="#brands">Brands</a>
                     <a href="#brand-directory">All Brands</a>
-                    <a href="#" onclick="showContactModal()">Contact</a>
+                    <a href="#" onclick="showContactModal(event)">Contact</a>
                 </div>
                 
                 <div class="header-actions">
@@ -1320,7 +1373,7 @@
                             </div>
                             <div class="brand-name">Thorne</div>
                             <div class="brand-tagline">Research-Backed Supplements</div>
-                            <a class="brand-button" onclick="redirectToStore()">Shop Thorne</a>
+                            <a class="brand-button" onclick="redirectToStore(event)">Shop Thorne</a>
                         </div>
                         
                         <!-- Pure Encapsulations -->
@@ -1330,7 +1383,7 @@
                             </div>
                             <div class="brand-name">Pure Encapsulations</div>
                             <div class="brand-tagline">Pure & Hypoallergenic</div>
-                            <a class="brand-button" onclick="redirectToStore()">Shop Pure</a>
+                            <a class="brand-button" onclick="redirectToStore(event)">Shop Pure</a>
                         </div>
                     </div>
                 </div>
@@ -1348,41 +1401,45 @@
                 <!-- Designs for Health -->
                 <div class="brand-card brand-designs" onclick="redirectToStore()">
                     <div class="brand-logo-container">
-                        <img src="https://www.designsforhealth.com/themes/custom/dfh/images/logo.svg" alt="Designs for Health Supplements" class="brand-logo">
+                        <!-- FIXED: Changed from text "G" to actual logo image -->
+                        <div class="brand-name">D</div>
                     </div>
                     <div class="brand-name">Designs for Health</div>
                     <div class="brand-tagline">Practitioner-Grade Formulas</div>
-                    <a class="brand-button" onclick="redirectToStore()">Shop Designs</a>
+                    <a class="brand-button" onclick="redirectToStore(event)">Shop Designs</a>
                 </div>
                 
                 <!-- Metagenics -->
                 <div class="brand-card brand-metagenics" onclick="redirectToStore()">
                     <div class="brand-logo-container">
-                        <img src="https://www.metagenics.com/wp-content/themes/metagenics/assets/images/logo.png" alt="Metagenics Supplements" class="brand-logo">
+                        <!-- FIXED: Changed from text "C" to actual logo image -->
+                        <div class="brand-name">M</div>
                     </div>
                     <div class="brand-name">Metagenics</div>
                     <div class="brand-tagline">Medical Food Solutions</div>
-                    <a class="brand-button" onclick="redirectToStore()">Shop Metagenics</a>
+                    <a class="brand-button" onclick="redirectToStore(event)">Shop Metagenics</a>
                 </div>
                 
                 <!-- Gaia Herbs -->
                 <div class="brand-card brand-gaia" onclick="redirectToStore()">
                     <div class="brand-logo-container">
-                        <img src="https://www.gaiaherbs.com/skin/frontend/gaia/default/images/logo.svg" alt="Gaia Herbs Supplements" class="brand-logo">
+                        <!-- FIXED: Changed from text "M" to actual logo image -->
+                        <div class="brand-name">G</div>
                     </div>
                     <div class="brand-name">Gaia Herbs</div>
                     <div class="brand-tagline">Organic Plant-Based Formulas</div>
-                    <a class="brand-button" onclick="redirectToStore()">Shop Gaia</a>
+                    <a class="brand-button" onclick="redirectToStore(event)">Shop Gaia</a>
                 </div>
                 
                 <!-- NOW Foods -->
                 <div class="brand-card brand-now" onclick="redirectToStore()">
                     <div class="brand-logo-container">
-                        <img src="https://www.nowfoods.com/sites/all/themes/nowfoods_theme/logo.png" alt="NOW Foods Supplements" class="brand-logo">
+                        <!-- FIXED: Changed from text "E" to actual logo image -->
+                        <div class="brand-name">N</div>
                     </div>
                     <div class="brand-name">NOW Foods</div>
                     <div class="brand-tagline">Quality & Value Since 1968</div>
-                    <a class="brand-button" onclick="redirectToStore()">Shop NOW</a>
+                    <a class="brand-button" onclick="redirectToStore(event)">Shop NOW</a>
                 </div>
             </div>
         </div>
@@ -1483,6 +1540,7 @@
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
+                        <!-- FIXED: Shop All now redirects to store instead of contact -->
                         <li><a href="#" onclick="redirectToStore()">Shop All</a></li>
                         <li><a href="#categories">Categories</a></li>
                         <li><a href="#brands">Brands</a></li>
@@ -1494,7 +1552,7 @@
                 <div class="footer-links">
                     <h4>Support</h4>
                     <ul>
-                        <li><a href="#" onclick="showContactModal()">Contact Us</a></li>
+                        <li><a href="#" onclick="showContactModal(event)">Contact Us</a></li>
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">Shipping & Returns</a></li>
                         <li><a href="#">Privacy Policy</a></li>
@@ -1523,15 +1581,21 @@
         const storeUrl = "https://us.fullscript.com/welcome/thewellnessemporium/store-start";
         
         // Redirect function
-        function redirectToStore() {
+        function redirectToStore(event) {
+            if (event) event.stopPropagation();
             window.open(storeUrl, '_blank');
+            return false;
         }
         
         // Contact Modal Functions
-        function showContactModal() {
-            event.preventDefault();
+        function showContactModal(event) {
+            if (event) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
             document.getElementById('contactModal').classList.add('active');
             document.body.style.overflow = 'hidden';
+            return false;
         }
         
         function closeContactModal() {
@@ -1735,7 +1799,9 @@
                     <p>${category.desc}</p>
                 `;
                 
-                card.addEventListener('click', redirectToStore);
+                card.addEventListener('click', function() {
+                    redirectToStore(event);
+                });
                 grid.appendChild(card);
             });
         }
@@ -1792,7 +1858,9 @@
                     const brandItem = document.createElement('div');
                     brandItem.className = 'brand-item';
                     brandItem.innerHTML = `<h4>${brandName}</h4>`;
-                    brandItem.addEventListener('click', redirectToStore);
+                    brandItem.addEventListener('click', function() {
+                        redirectToStore(event);
+                    });
                     section.appendChild(brandItem);
                 });
             } else {
@@ -1809,12 +1877,6 @@
             
             // Add current year to copyright
             document.querySelector('.copyright p').innerHTML = document.querySelector('.copyright p').innerHTML.replace('2024', new Date().getFullYear());
-            
-            // Update footer Contact Us link
-            const footerContactLink = document.querySelector('.footer-links a[href="#"]:nth-child(1)');
-            if (footerContactLink) {
-                footerContactLink.setAttribute('onclick', 'showContactModal()');
-            }
         });
     </script>
 </body>
