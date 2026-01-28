@@ -113,7 +113,7 @@
             --gaia-color: #2e8b57;
             --now-color: #800000;
             
-            /* Category Colors */
+            /* Category Colors - UPDATED WITH NEW COLORS */
             --dark-pink: #C2185B;
             --brown: #8B4513;
             --tan: #D2B48C;
@@ -124,12 +124,14 @@
             --green: #008000;
             --aqua: #00FFFF;
             --teal: #008080;
-            --orange: #FFA500;
+            --blue: #0000FF;
             --navy: #000080;
             --fuchsia: #FF00FF;
             --purple: #800080;
             --silver: #C0C0C0;
             --gray-dark: #808080;
+            --orange: #FFA500;        /* ADDED: For Protein & Fitness */
+            --lightblue: #ADD8E6;     /* ADDED: For Cognition & Focus */
         }
 
         * {
@@ -579,23 +581,23 @@
         /* Category image container - IMPROVED FOR FULL VISIBILITY */
         .category-image-container {
             width: 100%;
-            height: 220px; /* Increased height for better image visibility */
+            height: 220px;
             margin: 0;
             border-radius: 0;
             overflow: hidden;
             display: flex;
-            align-items: flex-start; /* Align to top to show full image */
+            align-items: flex-start;
             justify-content: center;
             padding: 0;
             flex: 1;
-            background-color: #f5f5f5; /* Light background for images */
+            background-color: #f5f5f5;
         }
 
         .category-image {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* Changed to contain to show full image */
-            object-position: center top; /* Align to top to show head/face */
+            object-fit: contain;
+            object-position: center top;
             border-radius: 0;
             transition: var(--transition);
         }
@@ -611,7 +613,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            min-height: 100px; /* Smaller text area */
+            min-height: 100px;
         }
 
         .category-card h3 {
@@ -696,6 +698,10 @@
             color: rgba(255, 255, 255, 0.95);
         }
         
+        /* UPDATED: Protein & Fitness to Orange */
+        .category-protein { 
+            background: var(--orange);
+        }
         .category-protein .category-content { 
             background: linear-gradient(135deg, var(--orange) 0%, #ffcc00 100%);
             color: #333;
@@ -704,12 +710,16 @@
             color: #333;
         }
         
+        /* UPDATED: Cognition & Focus to Light Blue */
+        .category-cognition { 
+            background: var(--lightblue);
+        }
         .category-cognition .category-content { 
-            background: linear-gradient(135deg, var(--navy) 0%, #0000b3 100%);
-            color: white;
+            background: linear-gradient(135deg, var(--lightblue) 0%, #87CEEB 100%);
+            color: #333;
         }
         .category-cognition p {
-            color: rgba(255, 255, 255, 0.95);
+            color: #333;
         }
         
         .category-thyroid .category-content { 
@@ -1752,7 +1762,7 @@
             }
         });
         
-        // Updated Category data with images - UPDATED FOR FULL VISIBILITY
+        // Updated Category data with images
         const categories = [
             { 
                 name: "Gut Health", 
@@ -1960,7 +1970,7 @@
             ],
             S: [
                 "Sabre Sciences", "Sage Solutions by Kan", "Salus/Floradix", "Sanesco", "Seed", 
-                "Seeking Health", "Serola Biomechanics", "Seroyal/Genestra", "Seroyal/Unda", 
+                "Seeking Health", "Serola Biomechanics", "Serroyal/Genestra", "Serroyal/Unda", 
                 "Shankara, Inc.", "Skinesa", "SmartyPants Vitamins", "Smidge (formerly Organic3)", 
                 "Solaray", "Sombra", "Source Naturals", "Sovereign Copper", "Sovereign Silver", 
                 "Spectrum Awakening", "Square 1", "Standard Process", "Stream2Sea", "suki skincare", 
